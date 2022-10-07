@@ -26,7 +26,7 @@
 }
 .imageCrop {
   width: 100%;
-  max-width: max(min(17vw, 170px), 100px);
+  max-width: max(min(10vw, 170px), 100px);
   margin: 10px 20px;
   border-radius: 50%;
 }
