@@ -12,5 +12,7 @@
         "titleBar.inactiveBackground": "#ff8ab199",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.color": "#ff8ab1"
+    "peacock.color": "#ff8ab1",
+    "editor.tabCompletion": "on",
+    "diffEditor.codeLens": true
 }
