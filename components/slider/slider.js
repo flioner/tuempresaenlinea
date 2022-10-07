@@ -188,6 +188,7 @@ const VerticalTest = ({ content }) => {
       perView: 2,
       spacing: 10,
     },
+    mode: "snap",
     vertical: true,
   })
 
