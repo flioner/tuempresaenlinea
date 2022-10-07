@@ -1,3 +1,11 @@
+.globalContainer {
+  width: 100%;
+  max-width: 1900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .middle {
   display: flex;
   justify-content: center;

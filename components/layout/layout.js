@@ -1,4 +1,5 @@
 import Head from "next/head";
+import s from "../../styles/Home.module.css";
 
 export const siteTitle = "Tu Empresa En Linea";
 
@@ -15,7 +16,9 @@ export default function Layout({ children, home }) {
 
       {<></>}
 
-      <main>{children}</main>
+      <div className={s.globalContainer}>
+        <main> {children}</main>
+      </div>
     </div>
   );
 }
