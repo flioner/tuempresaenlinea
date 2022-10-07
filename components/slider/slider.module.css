@@ -1,5 +1,4 @@
 .root {
-  max-height: fit-content;
   width: 100%;
   display: flex;
   //padding-bottom: 10px;
@@ -7,14 +6,17 @@
 }
 
 .slide {
+  width: 100%;
   text-align: center;
   min-width: fit-content;
 }
 
 .img {
+  width: 100%;
   border-radius: 12px;
 }
 
 .navigationWrapper {
+  width: 100%;
   position: relative;
 }

@@ -24,7 +24,7 @@ const Slider: React.FC<CarouselProps> = ({ images }) => {
       loop: true,
       mode: 'snap',
      
-      slides: { origin: 'center', perView: 3, spacing: 10 },
+      slides: { origin: 'center', perView: 1.5, spacing: 10 },
     },
     [
       (slider) => {
