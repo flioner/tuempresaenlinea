@@ -34,14 +34,8 @@ export default function Home() {
   ]
 
   return (
-    <Layout>
-      <div className={s.middle}>
- 
+    <Layout> 
           <Slider images={images} />
-     
-      </div>
-
-
     </Layout>
   );
 }
