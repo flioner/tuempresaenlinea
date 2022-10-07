@@ -1,6 +1,8 @@
+/* Global */
+
 .globalContainer {
   width: 100%;
-  max-width: 1900px;
+  max-width: 2100px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -11,8 +13,24 @@
   justify-content: center;
 }
 
+/* Text */
+.bigTitle {
+  @apply text-XL font-bold;
+}
+/* Sliders */
 .crop {
   width: 50%;
   display: flex;
   justify-content: center;
+}
+
+.cropVertical {
+  max-height: max(min(27vw, 500px), 170px);
+  display: flex;
+}
+
+.cropVerticalGlow {
+  max-height: max(min(30vw, 600px), 190px);
+  display: flex;
+  box-shadow: var(--topandbottomglow);
 }

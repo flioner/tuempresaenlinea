@@ -1,12 +1,35 @@
 import Layout from "../components/layout/layout";
-import { Slider } from "../components/slider/slider";
+import { Slider, VerticalSlider } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <Layout>
+      <div className={s.cropVerticalGlow} /* Vertical Slider */>
+        <VerticalSlider
+          content={[
+            [
+              "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",
+              "Landing Page",
+            ],
+            [
+              "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",
+              "E-Commerce",
+            ],
+            [
+              "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",
+              "Portafolio Digital",
+            ],
+            [
+              "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",
+              "Showroom",
+            ],
+          ]}
+        />
+      </div>
+
       <div className={s.middle}>
-        <div className={s.crop}>
+        <div className={s.crop} /* Profile Slider */>
           <Slider
             images={[
               [

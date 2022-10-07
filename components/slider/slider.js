@@ -11,7 +11,6 @@ const Slider = ({ images }) => {
   } else {
     slides = maxSlides;
   }
-  const [slidesDetails, setSlidesDetails] = React.useState(null);
   const [sliderRef] = useKeenSlider({
     initial: 1,
 
@@ -50,7 +49,6 @@ const AutoplaySlider = ({ images }) => {
   } else {
     slides = maxSlides;
   }
-  const [slidesDetails, setSlidesDetails] = React.useState(null);
   const [sliderRef] = useKeenSlider(
     {
       initial: 1,
@@ -113,4 +111,64 @@ const AutoplaySlider = ({ images }) => {
   );
 };
 
-export { Slider, AutoplaySlider };
+const VerticalSlider = ({ content }) => {
+  const [sliderRef] = useKeenSlider(
+    {
+      initial: 0,
+      mode: "snap",
+      slides: { origin: "center", perView: 1.4, spacing: 10 },
+      loop: true,
+      vertical: true,
+    },
+    [
+      (slider) => {
+        let timeout;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 10000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
+
+  return (
+    <div className="keen-slider" ref={sliderRef}>
+      {[...Array(content.length).keys()].map((idx) => {
+        return (
+          <div key={idx} className="keen-slider__slide">
+            <div className={s.verticalSlide}>
+              <img className={s.verticalImg} src={content[idx][0]} />
+
+              <div className={s.verticalTextCont}>
+                <div className={s.verticalTitle}>{content[idx][1]}</div>{" "}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export { Slider, AutoplaySlider, VerticalSlider };
