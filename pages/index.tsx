@@ -7,22 +7,23 @@ import Typewriter from 'typewriter-effect';
 export default function Home() {
   return (
     <Layout> 
-    <div /* TYPEWRITER */ className={s.landingContainer}>
-      <div className={s.landingText}>
-      Empieza tu &nbsp;
-        <div className={s.typewriter}>
-          <Typewriter 
-              options={{
-              strings: ['Página Web', 'Tienda en linea', 'Portafolio Digital'],
-              autoStart: true,
-              loop: true,
-            }}
-          />
+      <div /* TYPEWRITER */ className={s.landingContainer}>
+        <div className={s.landingText}>
+        Empieza tu &nbsp;
+          <div className={s.typewriter}>
+            <Typewriter 
+                options={{
+                strings: ['Página Web', 'Tienda en linea', 'Portafolio Digital'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
         </div>
       </div>
-    </div>
 
-      <VerticalSlider /* VERTICAL SLIDER */ images ={[
+      <div  /* VERTICAL SLIDER */ className={s.verticalGlow}>
+      <VerticalSlider images ={[
         {
           id: 0,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
@@ -48,6 +49,7 @@ export default function Home() {
           desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
       ]}/>
+      </div>
 
       <div /* TITLE */ className={s.middle} >
         <div className={s.title}> Nuestros Desarrolladores Web </div>

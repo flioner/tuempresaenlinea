@@ -36,6 +36,5 @@
 
   --topglow: 0 -10px 10px -10px rgba(0, 0, 0, 0.2);
   --bottomglow: 0 10px 10px -10px rgba(0, 0, 0, 0.2);
-  --topandbottomglow: 0 -10px 10px -10px rgba(0, 0, 0, 0.1),
-    0 10px 10px -10px rgba(0, 0, 0, 0.1);
+  --topandbottomglow: 0 -10px 10px -10px #eee, 0 10px 10px -10px #eee;
 }
