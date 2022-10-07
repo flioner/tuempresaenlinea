@@ -16,7 +16,7 @@ const ProfileSlider = ({ images }) => {
   
       slidesPerView={3}
       centeredSlides={true}
-      spaceBetween={15}
+      spaceBetween={35}
 
       mousewheel={true}
       modules={[Mousewheel, Autoplay]}

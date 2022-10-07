@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: max(min(27vw, 600px), 190px);
+  height: max(min(30vw, 550px), 100px);
 }
 .landingText {
   width: 100%;
@@ -50,10 +50,29 @@
 }
 
 /* Sliders */
-.crop {
-  width: 50%;
-  display: flex;
-  justify-content: center;
+@media (max-width: 1000px) {
+  .crop {
+    width: 62%;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+  }
+}
+@media (min-width: 1000px) {
+  .crop {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+  }
+}
+@media (min-width: 1500px) {
+  .crop {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+  }
 }
 
 .cropVertical {
