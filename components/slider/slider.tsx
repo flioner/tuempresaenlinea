@@ -3,8 +3,8 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import s from "./slider.module.css";
 import cn from "clsx";
-import { Module
- } from "./sliderSubComponent";
+import { Module} from "./sliderSubComponent";
+ 
 const Slider = ({ images }) => {
   const maxSlides = 5;
   var slides = 1;
