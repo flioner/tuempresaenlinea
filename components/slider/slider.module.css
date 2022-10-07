@@ -26,6 +26,7 @@
 }
 .imageCrop {
   width: max(min(10vw, 170px), 100px);
+  height: auto;
   margin: 10px 20px;
   border-radius: 50%;
 }
@@ -43,41 +44,58 @@
   max-height: max(min(30vw, 600px), 190px);
 }
 
-.verticalSlide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-color: var(--lightergrey);
-  box-shadow: var(--extraglow);
-}
-
-.verticalImg {
-  height: auto;
-  margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px);
-  border-radius: 8px;
-  box-shadow: var(--shortglow);
-}
-
 @media (max-width: 600px) {
-  .verticalTextCont {
+  .verticalSlide {
     width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: var(--lightergrey);
+    box-shadow: var(--extraglow);
+  }
+
+  .verticalImg {
+    width: 35%;
+    object-fit: cover;
+    margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px);
+    border-radius: 8px;
+    box-shadow: var(--shortglow);
+  }
+  .verticalTextCont {
+    width: 65%;
     margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
       max(min(1vw, 20px), 10px) 0px;
     background-color: var(--almostwhite);
     border-radius: 8px;
     box-shadow: var(--shortglow);
-    line-height: 1;
     transition: 0.3s;
   }
 }
-.verticalTextCont {
-  width: 100%;
-  margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
-    max(min(1vw, 20px), 10px) 0px;
-  background-color: var(--almostwhite);
-  border-radius: 8px;
-  box-shadow: var(--shortglow);
-  transition: 0.3s;
+
+@media (min-width: 600px) {
+  .verticalSlide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--lightergrey);
+    box-shadow: var(--extraglow);
+  }
+  .verticalImg {
+    height: 90%;
+    margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px);
+    border-radius: 8px;
+    box-shadow: var(--shortglow);
+  }
+  .verticalTextCont {
+    width: 100%;
+    height: 90%;
+    margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
+      max(min(1vw, 20px), 10px) 0px;
+    background-color: var(--almostwhite);
+    border-radius: 8px;
+    box-shadow: var(--shortglow);
+    transition: 0.3s;
+  }
 }
 
 .verticalCenter {
