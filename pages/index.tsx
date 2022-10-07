@@ -1,5 +1,5 @@
 import Layout from "../components/layout/layout";
-import { ProfileSlider } from "../components/slider/slider";
+import { ProfileSlider, VerticalSlider } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
 import React from 'react'
 
@@ -39,6 +39,29 @@ export default function Home() {
       ]}/>
       </div>
       </div>
+      
+      <VerticalSlider images ={[
+        {
+          id: 0,
+          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
+          titulo: 'Portafolio',
+        },
+        {
+          id: 1,
+          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
+          titulo: 'E-Commerce',
+        },
+        {
+          id: 2,
+          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
+          titulo: 'Showroom',
+        },
+        {
+          id: 3,
+          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
+          titulo: 'Landing Page',
+        },
+      ]}/>
     </Layout>
   );
 }
