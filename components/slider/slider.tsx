@@ -11,7 +11,7 @@ const ProfileSlider = ({ images }) => {
    
       slidesPerView={3}
       centeredSlides={true}
-      spaceBetween={15}
+      spaceBetween={25}
 
       mousewheel={true}
       modules={[Mousewheel]}
@@ -21,8 +21,6 @@ const ProfileSlider = ({ images }) => {
             <img
             className={s.imageCrop} 
             src={src}
-            width={978}
-            height={550}
             />
             <div className={s.text}> {nombre}</div>
         </SwiperSlide>))}  
