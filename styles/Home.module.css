@@ -25,7 +25,7 @@
 }
 
 .cropVertical {
-  max-height: max(min(27vw, 500px), 170px);
+  max-height: max(min(27vw, 500px), 190px);
   display: flex;
 }
 
