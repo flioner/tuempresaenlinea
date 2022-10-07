@@ -3,6 +3,8 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import s from "./slider.module.css";
 import cn from "clsx";
+import { Module
+ } from "./sliderSubComponent";
 const Slider = ({ images }) => {
   const maxSlides = 5;
   var slides = 1;
@@ -193,21 +195,11 @@ const VerticalTest = ({ content }) => {
   })
   return (
     <div ref={sliderRef} className="keen-slider" style={{ height: 300 }}>
-            <div className={cn('keen-slider__slide', s.verticalSlide)}>
-          1
-          </div>
-          <div className={cn('keen-slider__slide', s.verticalSlide)}>
-          2
-          </div>
-          <div className={cn('keen-slider__slide', s.verticalSlide)}>
-          3
-          </div>
-          <div className={cn('keen-slider__slide', s.verticalSlide)}>
-          4
-          </div>
-          <div className={cn('keen-slider__slide', s.verticalSlide)}>
-          5
-          </div>
+            <div className='keen-slider__slide'><Module/></div>
+            <div className='keen-slider__slide'><Module/></div>
+            <div className='keen-slider__slide'><Module/></div>
+          
+        
      
     </div>
   )
