@@ -11,13 +11,13 @@ const ProfileSlider = ({ images }) => {
    
       slidesPerView={3}
       centeredSlides={true}
-      spaceBetween={25}
+      spaceBetween={15}
 
       mousewheel={true}
       modules={[Mousewheel]}
     >
       {images.map(({ id, src, nombre }) => (
-        <SwiperSlide  className={s.slide}   key={id}>  
+        <SwiperSlide  className={s.profileSlide}   key={id}>  
             <img
             className={s.imageCrop} 
             src={src}
