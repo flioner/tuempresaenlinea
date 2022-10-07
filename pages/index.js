@@ -14,6 +14,17 @@ export default function Home() {
                 "Fabian Lioner",
                 true,
               ],
+              [
+                "https://eddencei.sirv.com/profile%20pic/FabianLioner.jpg",
+                "Fabian Lioner",
+                true,
+              ],
+              [
+                "https://eddencei.sirv.com/profile%20pic/FabianLioner.jpg",
+                "Fabian Lioner",
+                true,
+              ],
+          
             ]}
           />
         </div>
