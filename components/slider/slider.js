@@ -181,32 +181,26 @@ const VerticalSlider = ({ content }) => {
 
 
 const VerticalTest = ({ content }) => {
-  const [sliderRef] = useKeenSlider(
-    {
-      initial: 0,
-
-      mode: "snap",
-      slides: { origin: "center", perView: 1.5, spacing: 10 },
-      loop: true,
-      vertical: true,
-      renderMode: "precision",
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    slides: {
+      origin: "center",
+      perView: 2,
+      spacing: 10,
     },
-
-  );
+    vertical: true,
+  })
 
   return (
-    <div className={cn("keen-slider")} ref={sliderRef} height={310}>
-      {[...Array(content.length).keys()].map((idx) => {
-        return (
-          <div key={idx} className="keen-slider__slide">
-            <div className={s.verticalTest}>
-            uwu
-            </div>
-          </div>
-        );
-      })}
+    <div ref={sliderRef} className="keen-slider" style={{ height: 300 }}>
+      <div className="keen-slider__slide "><div className={s.verticalTest}>1</div></div>
+      <div className="keen-slider__slide "><div className={s.verticalTest}>1</div></div>
+      <div className="keen-slider__slide "><div className={s.verticalTest}>1</div></div>
+      <div className="keen-slider__slide "><div className={s.verticalTest}>1</div></div>
+      <div className="keen-slider__slide "><div className={s.verticalTest}>1</div></div>
+      <div className="keen-slider__slide "><div className={s.verticalTest}>1</div></div>
     </div>
-  );
+  )
 };
 
 export { Slider, AutoplaySlider, VerticalSlider, VerticalTest };
