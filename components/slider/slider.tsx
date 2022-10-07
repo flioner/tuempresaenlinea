@@ -1,223 +1,31 @@
 import React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import s from "./slider.module.css";
-import cn from "clsx";
-import { Module} from "./sliderSubComponent";
- 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
 const Slider = ({ images }) => {
-  const maxSlides = 5;
-  var slides = 1;
-  if (images.length <= maxSlides) {
-    slides = images.length;
-  } else {
-    slides = maxSlides;
-  }
-  const [sliderRef] = useKeenSlider({
-    initial: 1,
 
-    mode: "snap",
-
-    slides: { perView: slides, spacing: 25 },
-    loop: true,
-  });
 
   return (
-    <div
-    ref={sliderRef}
-    className={cn('keen-slider', s.root, s.navigationWrapper)}
-  >
-    {images.map(({ id, src, path, alt = 'Product Image' }, idx) => (
-      <div className='keen-slider__slide' key={id}>
- <div className={s.slide}>
-                <img
-                  className={!images[idx][2] ? s.image : s.imageCrop}
-                  src={images[idx][0]}
-                />
-                <div className={s.text}> {images[idx][1]} </div>
-              </div>
-      </div>
-    ))}
-  </div>
-  
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      loop={true}
+    >
+
+{images.map(({ id, src, path, alt = 'Product Image' }, idx) => (
+  <SwiperSlide key={id}>  <img
+  src={src}
+  alt={alt}
+  width={978}
+  height={550}
+/></SwiperSlide>
+        ))}  
+    </Swiper>
   );
 };
 
-const AutoplaySlider = ({ images }) => {
-  const maxSlides = 5;
-  var slides = 1;
-  if (images.length <= maxSlides) {
-    slides = images.length;
-  } else {
-    slides = maxSlides;
-  }
-  const [sliderRef] = useKeenSlider(
-    {
-      initial: 1,
-
-      mode: "snap",
-
-      slides: { perView: slides, spacing: 25 },
-      loop: true,
-    },
-    [
-      (slider) => {
-        let timeout;
-        let mouseOver = false;
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 10000);
-        }
-        slider.on("created", () => {
-          slider.container.addEventListener("mouseover", () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener("mouseout", () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on("dragStarted", clearNextTimeout);
-        slider.on("animationEnded", nextTimeout);
-        slider.on("updated", nextTimeout);
-      },
-    ]
-  );
-
-  return (
-    <div
-    ref={sliderRef}
-    className={cn('keen-slider', s.root, s.navigationWrapper)}
-  >
-    {images.map(({ id, src, path, alt = 'Product Image' }, idx) => (
-      <div className='keen-slider__slide' key={id}>
- <div className={s.slide}>
-                <img
-                  className={!images[idx][2] ? s.image : s.imageCrop}
-                  src={images[idx][0]}
-                />
-                <div className={s.text}> {images[idx][1]} </div>
-              </div>
-      </div>
-    ))}
-  </div>
-  
-  );
-};
-
-const VerticalSlider = ({ content }) => {
-  const [sliderRef] = useKeenSlider(
-    {
-      initial: 0,
-
-      breakpoints: {
-        "(min-width: 1100px)": {
-          dragSpeed: 1,
-        },
-      },
-      dragSpeed: 0.5,
-      mode: "snap",
-      slides: { origin: "center", perView: 1.5, spacing: 10 },
-      loop: true,
-      vertical: true,
-      renderMode: "precision",
-    },
-    [
-      (slider) => {
-        let timeout;
-        let mouseOver = false;
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 10000);
-        }
-        slider.on("created", () => {
-          slider.container.addEventListener("mouseover", () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener("mouseout", () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on("dragStarted", clearNextTimeout);
-        slider.on("animationEnded", nextTimeout);
-        slider.on("updated", nextTimeout);
-      },
-    ]
-  );
-
-  return (
-    <div
-    ref={sliderRef}
-    className={cn('keen-slider', s.root, s.navigationWrapper)}
-  >
-    {content.map(({ id, src, path, alt = 'Product Image' }, idx) => (
-      <div className='keen-slider__slide' key={id}>
-      <div key={idx} className="keen-slider__slide">
-            <div className={s.verticalSlide}>
-              <img className={s.verticalImg} src={content[idx][0]} />
-
-              <div className={s.verticalTextCont}>
-                <div className={s.verticalTitle}>{content[idx][1]}</div>
-              </div>
-            </div>
-          </div>
-      </div>
-    ))}
-  </div>
-  );
-};
+export { Slider };
 
 
-const VerticalTest = ({ content }) => {
-  const [sliderRef] = useKeenSlider({
-    initial: 1,
-
-    mode: "snap",
-
-    slides: { origin: "center", perView: 2.5, spacing: 10 },
-    loop: true,
-  });
-
-  return (
-    <div
-    ref={sliderRef}
-    className={cn('keen-slider', s.root, s.navigationWrapper)}
-  >
-    {content.map(({ id, src, path, alt = 'Product Image' }, idx) => (
-      <div className='keen-slider__slide' key={id}>
-      <div key={idx} className="keen-slider__slide">
-            <div className={s.verticalSlide}>
-              <img className={s.verticalImg} src={content[idx][0]} />
-
-              <div className={s.verticalTextCont}>
-                <div className={s.verticalTitle}>{content[idx][1]}</div>
-              </div>
-            </div>
-          </div>
-      </div>
-    ))}
-  </div>
-  );
-};
-  
-
-export { Slider, AutoplaySlider, VerticalSlider, VerticalTest };
 
 

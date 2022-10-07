@@ -1,4 +1,12 @@
 /* Horizontal Slider */
+.cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .middle {
   display: flex;
   justify-content: center;
@@ -27,53 +35,4 @@
   width: 100%;
   text-align: center;
   font-size: var(--S);
-}
-
-/* Vertical Slider */
-
-.verticalCont {
-  max-height: max(min(30vw, 600px), 190px);
-}
-
-.verticalSlide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-color: var(--lightergrey);
-  box-shadow: var(--extraglow);
-}
-
-.verticalImg {
-  margin: 10px 5px 10px 10px;
-  width: auto;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: var(--shortglow);
-}
-
-.verticalTextCont {
-  width: 100%;
-  margin: 10px 10px 10px 5px;
-  background-color: var(--almostwhite);
-  border-radius: 8px;
-  box-shadow: var(--shortglow);
-}
-
-.verticalTitle {
-  font-size: var(--M);
-  font-weight: bold;
-  margin: 5px 15px;
-  color: var(--darkgrey);
-}
-
-/* test */
-.verticalTest {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-color: var(--darkgrey);
-}
-.verticalSlide {
-  text-align: center;
-  min-width: fit-content;
 }
