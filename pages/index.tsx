@@ -13,7 +13,7 @@ export default function Home() {
           <div className={s.typewriter}>
             <Typewriter 
                 options={{
-                strings: ['Página Web', 'Tienda en linea', 'Portafolio Digital'],
+                strings: ['Página Web', 'Tienda en línea', 'Portafolio Digital'],
                 autoStart: true,
                 loop: true,
               }}

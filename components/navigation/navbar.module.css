@@ -1,10 +1,10 @@
 .navContainer {
   display: flex;
-  height: 80px;
+  height: max(min(8vw, 80px), 50px);
   background-color: #fff;
   padding: 20px;
   justify-content: space-between;
-  box-shadow: 0 10px 10px -10px #eee;
+  box-shadow: 0 10px 10px -10px #e8e8e8;
 }
 
 .footerSpacer {
@@ -12,9 +12,9 @@
 }
 
 .footer {
-  box-shadow: 0 -10px 10px -10px #eee;
+  box-shadow: 0 -10px 10px -10px #e8e8e8;
   position: absolute;
   width: 100%;
   bottom: -0px;
-  height: 80px;
+  height: max(min(8vw, 80px), 50px);
 }
