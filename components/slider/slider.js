@@ -184,22 +184,33 @@ const VerticalSlider = ({ content }) => {
 
 const VerticalTest = ({ content }) => {
   const [sliderRef] = useKeenSlider({
-    loop: true,
-    slides: {
-      origin: "center",
-      perView: 1.5,
-      spacing: 10,
-    },
+    initial: 1,
+
     mode: "snap",
 
-  })
+    slides: { origin: "center", perView: 2.5, spacing: 10 },
+    loop: true,
+  });
+
   return (
-    <div ref={sliderRef} className="keen-slider" style={{ height: 300 }}>
-            <div className='keen-slider__slide'><Module/></div>
-            <div className='keen-slider__slide'><Module/></div>
-            <div className='keen-slider__slide'><Module/></div> 
+    <div className="keen-slider" ref={sliderRef}>
+      <div className={s.middle}>
+        {[...Array(content.length).keys()].map((idx) => {
+          return (
+            <div key={idx} className="keen-slider__slide">
+              <div className={s.slide}>
+                <img
+                  className={s.image}
+                  src={content[idx][0]}
+                />
+                <div className={s.text}> {content[idx][1]} </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 };
   
 
