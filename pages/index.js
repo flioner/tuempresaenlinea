@@ -1,5 +1,5 @@
 import Layout from "../components/layout/layout";
-import { Slider, VerticalSlider } from "../components/slider/slider";
+import { Slider, VerticalSlider, VerticalTest } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       </div>
 
       <div className={s.verticalGlow} /* Vertical Slider */>
-        <VerticalSlider
+        <VerticalTest
           content={[
             [
               "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",

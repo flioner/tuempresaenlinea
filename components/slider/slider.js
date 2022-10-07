@@ -179,4 +179,34 @@ const VerticalSlider = ({ content }) => {
   );
 };
 
-export { Slider, AutoplaySlider, VerticalSlider };
+
+const VerticalTest = ({ content }) => {
+  const [sliderRef] = useKeenSlider(
+    {
+      initial: 0,
+
+      mode: "snap",
+      slides: { origin: "center", perView: 1.5, spacing: 10 },
+      loop: true,
+      vertical: true,
+      renderMode: "precision",
+    },
+
+  );
+
+  return (
+    <div className={cn("keen-slider")} ref={sliderRef} height={310}>
+      {[...Array(content.length).keys()].map((idx) => {
+        return (
+          <div key={idx} className="keen-slider__slide">
+            <div className={s.verticalTest}>
+            uwu
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export { Slider, AutoplaySlider, VerticalSlider, VerticalTest };
