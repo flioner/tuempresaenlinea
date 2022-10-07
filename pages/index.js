@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={s.cropVerticalGlow} /* Vertical Slider */>
+      <div className={s.verticalGlow} /* Vertical Slider */>
         <VerticalSlider
           content={[
             [

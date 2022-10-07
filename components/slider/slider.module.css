@@ -31,6 +31,10 @@
 
 /* Vertical Slider */
 
+.verticalCont {
+  max-height: max(min(30vw, 600px), 190px);
+}
+
 .verticalSlide {
   width: 100%;
   height: 100%;
@@ -41,6 +45,7 @@
 
 .verticalImg {
   margin: 10px 5px 10px 10px;
+  width: auto;
   height: auto;
   border-radius: 8px;
   box-shadow: var(--shortglow);

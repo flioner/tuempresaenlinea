@@ -2,7 +2,7 @@ import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import s from "./slider.module.css";
-
+import cn from "clsx";
 const Slider = ({ images }) => {
   const maxSlides = 5;
   var slides = 1;
@@ -161,7 +161,7 @@ const VerticalSlider = ({ content }) => {
   );
 
   return (
-    <div className="keen-slider" ref={sliderRef}>
+    <div className={cn("keen-slider", s.verticalCont)} ref={sliderRef}>
       {[...Array(content.length).keys()].map((idx) => {
         return (
           <div key={idx} className="keen-slider__slide">
@@ -169,7 +169,7 @@ const VerticalSlider = ({ content }) => {
               <img className={s.verticalImg} src={content[idx][0]} />
 
               <div className={s.verticalTextCont}>
-                <div className={s.verticalTitle}>{content[idx][1]}</div>{" "}
+                <div className={s.verticalTitle}>{content[idx][1]}</div>
               </div>
             </div>
           </div>
