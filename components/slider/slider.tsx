@@ -93,23 +93,23 @@ const AutoplaySlider = ({ images }) => {
   );
 
   return (
-    <div className="keen-slider" ref={sliderRef}>
-      {[...Array(images.length).keys()].map((idx) => {
-        return (
-          <div key={idx} className={s.middle}>
-            <div className="keen-slider__slide">
-              <div className={s.slide}>
+    <div
+    ref={sliderRef}
+    className={cn('keen-slider', s.root, s.navigationWrapper)}
+  >
+    {images.map(({ id, src, path, alt = 'Product Image' }, idx) => (
+      <div className='keen-slider__slide' key={id}>
+ <div className={s.slide}>
                 <img
                   className={!images[idx][2] ? s.image : s.imageCrop}
                   src={images[idx][0]}
                 />
                 <div className={s.text}> {images[idx][1]} </div>
               </div>
-            </div>
-          </div>
-        );
-      })}
-    </div>
+      </div>
+    ))}
+  </div>
+  
   );
 };
 
@@ -163,10 +163,13 @@ const VerticalSlider = ({ content }) => {
   );
 
   return (
-    <div className={cn("keen-slider", s.verticalCont)} ref={sliderRef}>
-      {[...Array(content.length).keys()].map((idx) => {
-        return (
-          <div key={idx} className="keen-slider__slide">
+    <div
+    ref={sliderRef}
+    className={cn('keen-slider', s.root, s.navigationWrapper)}
+  >
+    {content.map(({ id, src, path, alt = 'Product Image' }, idx) => (
+      <div className='keen-slider__slide' key={id}>
+      <div key={idx} className="keen-slider__slide">
             <div className={s.verticalSlide}>
               <img className={s.verticalImg} src={content[idx][0]} />
 
@@ -175,9 +178,9 @@ const VerticalSlider = ({ content }) => {
               </div>
             </div>
           </div>
-        );
-      })}
-    </div>
+      </div>
+    ))}
+  </div>
   );
 };
 
@@ -193,25 +196,28 @@ const VerticalTest = ({ content }) => {
   });
 
   return (
-    <div className="keen-slider" ref={sliderRef}>
-      <div className={s.middle}>
-        {[...Array(content.length).keys()].map((idx) => {
-          return (
-            <div key={idx} className="keen-slider__slide">
-              <div className={s.slide}>
-                <img
-                  className={s.image}
-                  src={content[idx][0]}
-                />
-                <div className={s.text}> {content[idx][1]} </div>
+    <div
+    ref={sliderRef}
+    className={cn('keen-slider', s.root, s.navigationWrapper)}
+  >
+    {content.map(({ id, src, path, alt = 'Product Image' }, idx) => (
+      <div className='keen-slider__slide' key={id}>
+      <div key={idx} className="keen-slider__slide">
+            <div className={s.verticalSlide}>
+              <img className={s.verticalImg} src={content[idx][0]} />
+
+              <div className={s.verticalTextCont}>
+                <div className={s.verticalTitle}>{content[idx][1]}</div>
               </div>
             </div>
-          );
-        })}
+          </div>
       </div>
-    </div>
+    ))}
+  </div>
   );
 };
   
 
 export { Slider, AutoplaySlider, VerticalSlider, VerticalTest };
+
+
