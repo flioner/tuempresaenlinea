@@ -58,6 +58,18 @@
   box-shadow: var(--shortglow);
 }
 
+@media (max-width: 600px) {
+  .verticalTextCont {
+    width: 100%;
+    margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
+      max(min(1vw, 20px), 10px) 0px;
+    background-color: var(--almostwhite);
+    border-radius: 8px;
+    box-shadow: var(--shortglow);
+    line-height: 1;
+    transition: 0.3s;
+  }
+}
 .verticalTextCont {
   width: 100%;
   margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
@@ -65,6 +77,7 @@
   background-color: var(--almostwhite);
   border-radius: 8px;
   box-shadow: var(--shortglow);
+  transition: 0.3s;
 }
 
 .verticalCenter {
