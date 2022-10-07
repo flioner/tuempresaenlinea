@@ -25,7 +25,7 @@ const Slider = ({ images }) => {
       <div className={s.middle}>
         {[...Array(images.length).keys()].map((idx) => {
           return (
-            <div key={idx} className="keen-slider__slide">
+            <div className="keen-slider__slide">
               <div className={s.slide}>
                 <img
                   className={!images[idx][2] ? s.image : s.imageCrop}
@@ -95,7 +95,7 @@ const AutoplaySlider = ({ images }) => {
       {[...Array(images.length).keys()].map((idx) => {
         return (
           <div className={s.middle}>
-            <div key={idx} className="keen-slider__slide">
+            <div className="keen-slider__slide">
               <div className={s.slide}>
                 <img
                   className={!images[idx][2] ? s.image : s.imageCrop}
@@ -156,7 +156,7 @@ const VerticalSlider = ({ content }) => {
     <div className="keen-slider" ref={sliderRef}>
       {[...Array(content.length).keys()].map((idx) => {
         return (
-          <div key={idx} className="keen-slider__slide">
+          <div className="keen-slider__slide">
             <div className={s.verticalSlide}>
               <img className={s.verticalImg} src={content[idx][0]} />
 
