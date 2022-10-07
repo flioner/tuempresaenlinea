@@ -191,16 +191,13 @@ const VerticalTest = ({ content }) => {
       spacing: 10,
     },
     mode: "snap",
-    vertical: true,
+
   })
   return (
     <div ref={sliderRef} className="keen-slider" style={{ height: 300 }}>
             <div className='keen-slider__slide'><Module/></div>
             <div className='keen-slider__slide'><Module/></div>
-            <div className='keen-slider__slide'><Module/></div>
-          
-        
-     
+            <div className='keen-slider__slide'><Module/></div> 
     </div>
   )
 };
