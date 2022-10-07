@@ -185,7 +185,7 @@ const VerticalTest = ({ content }) => {
     loop: true,
     slides: {
       origin: "center",
-      perView: 2,
+      perView: 1.5,
       spacing: 10,
     },
     mode: "snap",
