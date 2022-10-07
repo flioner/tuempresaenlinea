@@ -73,4 +73,8 @@
   display:  flex;
   background-color: var(--darkgrey);
 }
+.verticalSlide {
+  text-align: center;
+  min-width: fit-content;
+}
 

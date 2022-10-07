@@ -193,18 +193,21 @@ const VerticalTest = ({ content }) => {
   })
   return (
     <div ref={sliderRef} className="keen-slider" style={{ height: 300 }}>
-      <div className="keen-slider__slide"><div className={s.verticalTest}>
-                1
-              </div></div>
-              <div className="keen-slider__slide"><div className={s.verticalTest}>
-                2
-              </div></div><div className="keen-slider__slide"><div className={s.verticalTest}>
-                3
-              </div></div><div className="keen-slider__slide"><div className={s.verticalTest}>
-                4
-              </div></div><div className="keen-slider__slide"><div className={s.verticalTest}>
-                5
-              </div></div>
+            <div className={cn('keen-slider__slide', s.verticalSlide)}>
+          1
+          </div>
+          <div className={cn('keen-slider__slide', s.verticalSlide)}>
+          2
+          </div>
+          <div className={cn('keen-slider__slide', s.verticalSlide)}>
+          3
+          </div>
+          <div className={cn('keen-slider__slide', s.verticalSlide)}>
+          4
+          </div>
+          <div className={cn('keen-slider__slide', s.verticalSlide)}>
+          5
+          </div>
      
     </div>
   )
