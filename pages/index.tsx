@@ -7,7 +7,7 @@ import Typewriter from 'typewriter-effect';
 export default function Home() {
   return (
     <Layout> 
-    <div className={s.landingContainer}>
+    <div /* TYPEWRITER */ className={s.landingContainer}>
       <div className={s.landingText}>
       Empieza tu &nbsp;
         <div className={s.typewriter}>
@@ -22,7 +22,7 @@ export default function Home() {
       </div>
     </div>
 
-      <VerticalSlider /* VERTICAL SLIDER*/ images ={[
+      <VerticalSlider /* VERTICAL SLIDER */ images ={[
         {
           id: 0,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
@@ -49,7 +49,11 @@ export default function Home() {
         },
       ]}/>
 
-      <div className={s.middle} /* PROFILE SLIDER*/>
+      <div /* TITLE */ className={s.middle} >
+        <div className={s.title}> Nuestros Desarrolladores Web </div>
+      </div>
+      
+      <div /* PROFILE SLIDER */ className={s.middle} >
         <div className={s.crop}>
           <ProfileSlider images ={[
             {
