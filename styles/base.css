@@ -22,7 +22,12 @@
   --XS: max(min(1vw, 1rem), 0.8rem);
 
   /* Extra font sizes */
-  --4XL: max(min(3.5vw, 4rem), 1.4rem);
+  @media (max-width: 400px) {
+    --4XL: max(min(3.5vw, 4rem), 1rem);
+  }
+  @media (min-width: 400px) {
+    --4XL: max(min(3.5vw, 4rem), 1.4rem);
+  }
   --EM: max(min(2.5vw, 2.2rem), 1rem);
   --ES: max(min(2.2vw, 2rem), 0.8rem);
   --EXS: max(min(1.5vw, 1.8rem), 0.7rem);
