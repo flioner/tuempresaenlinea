@@ -115,7 +115,7 @@ const VerticalSlider = ({ content }) => {
   const [sliderRef] = useKeenSlider(
     {
       initial: 0,
-      mode: "snap",
+      mode: "free-snap",
       slides: { origin: "center", perView: 1.4, spacing: 10 },
       loop: true,
       vertical: true,
