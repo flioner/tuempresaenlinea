@@ -4,21 +4,26 @@ import "keen-slider/keen-slider.min.css";
 import s from "./slider.module.css";
 
 const Slider = ({ images }) => {
-  const slidesPerView = 1;
-  const numberSlides = slidesPerView + 1;
+  const maxSlides = 5;
+  var slides = 1;
+  if (images.length <= maxSlides) {
+    slides = images.length;
+  } else {
+    slides = maxSlides;
+  }
   const [slidesDetails, setSlidesDetails] = React.useState(null);
   const [sliderRef] = useKeenSlider({
     initial: 1,
 
     mode: "snap",
 
-    slides: { origin: "center", perView: 3, spacing: 10 },
+    slides: { perView: slides, spacing: 25 },
     loop: true,
   });
 
   return (
-    <div className={s.middle}>
-      <div className="keen-slider" ref={sliderRef}>
+    <div className="keen-slider" ref={sliderRef}>
+      <div className={s.middle}>
         {[...Array(images.length).keys()].map((idx) => {
           return (
             <div key={idx} className="keen-slider__slide">
@@ -38,8 +43,13 @@ const Slider = ({ images }) => {
 };
 
 const AutoplaySlider = ({ images }) => {
-  const slidesPerView = 1;
-  const numberSlides = slidesPerView + 1;
+  const maxSlides = 5;
+  var slides = 1;
+  if (images.length <= maxSlides) {
+    slides = images.length;
+  } else {
+    slides = maxSlides;
+  }
   const [slidesDetails, setSlidesDetails] = React.useState(null);
   const [sliderRef] = useKeenSlider(
     {
@@ -47,7 +57,7 @@ const AutoplaySlider = ({ images }) => {
 
       mode: "snap",
 
-      slides: { origin: "center", perView: 3, spacing: 10 },
+      slides: { perView: slides, spacing: 25 },
       loop: true,
     },
     [
@@ -83,19 +93,22 @@ const AutoplaySlider = ({ images }) => {
   );
 
   return (
-    <div className={s.middle}>
-      <div className="keen-slider" ref={sliderRef}>
-        {[...Array(images.length).keys()].map((idx) => {
-          return (
+    <div className="keen-slider" ref={sliderRef}>
+      {[...Array(images.length).keys()].map((idx) => {
+        return (
+          <div className={s.middle}>
             <div key={idx} className="keen-slider__slide">
               <div className={s.slide}>
-                <img className={s.image} src={images[idx][0]} />
+                <img
+                  className={!images[idx][2] ? s.image : s.imageCrop}
+                  src={images[idx][0]}
+                />
                 <div className={s.text}> {images[idx][1]} </div>
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
