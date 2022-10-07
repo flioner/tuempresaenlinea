@@ -22,7 +22,9 @@
 
   /* Extra font sizes */
   --EM: max(min(2.5vw, 2.2rem), 1rem);
+  --ES: max(min(2.2vw, 2rem), 0.8rem);
   --EXS: max(min(1.5vw, 1.8rem), 0.7rem);
+  --EXXS: max(min(1.2vw, 1.3rem), 0.55rem);
 
   /* Effects */
 
