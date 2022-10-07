@@ -39,6 +39,7 @@
 /* Vertical Slider */
 
 .verticalCont {
+  width: 100%;
   max-height: max(min(30vw, 600px), 190px);
 }
 
@@ -51,36 +52,40 @@
 }
 
 .verticalImg {
-  margin: 10px 5px 10px 10px;
-  width: auto;
   height: auto;
+  margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px);
   border-radius: 8px;
   box-shadow: var(--shortglow);
 }
 
 .verticalTextCont {
   width: 100%;
-  margin: 10px 10px 10px 5px;
+  margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
+    max(min(1vw, 20px), 10px) 0px;
   background-color: var(--almostwhite);
   border-radius: 8px;
   box-shadow: var(--shortglow);
 }
 
+.verticalCenter {
+  position: absolute;
+  margin-right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .verticalTitle {
-  font-size: var(--M);
+  font-size: var(--EM);
   font-weight: bold;
-  margin: 5px 15px;
+  margin: 0px max(min(4vw, 80px), 25px);
   color: var(--darkgrey);
 }
 
-/* test */
-.verticalTest {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  background-color: var(--darkgrey);
-}
-.verticalSlide {
-  text-align: center;
-  min-width: fit-content;
+.verticalDesc {
+  text-align: justify;
+  font-size: var(--EXS);
+  margin: max(min(1vw, 30px), 0px) max(min(4vw, 80px), 25px);
+  color: var(--darkgrey);
 }

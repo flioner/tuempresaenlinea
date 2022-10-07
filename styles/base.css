@@ -10,7 +10,7 @@
   --almostwhite: #f9f9f9;
   --white: #fff;
 
-  /* Responsive text sizes */
+  /* Responsive font sizes */
   --XXXXL: max(min(3vw, 4rem), 2.5rem);
   --XXXL: max(min(2.7vw, 3rem), 2rem);
   --XXL: max(min(2.5vw, 2.5rem), 1.7rem);
@@ -19,6 +19,10 @@
   --M: max(min(1.7vw, 1.5rem), 1rem);
   --S: max(min(1.8vw, 1.2rem), 0.85rem);
   --XS: max(min(1vw, 1rem), 0.8rem);
+
+  /* Extra font sizes */
+  --EM: max(min(2.5vw, 2.2rem), 1rem);
+  --EXS: max(min(1.5vw, 1.8rem), 0.7rem);
 
   /* Effects */
 

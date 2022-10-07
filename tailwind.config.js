@@ -12,6 +12,9 @@ module.exports = {
         M: "var(--M)",
         S: "var(--S)",
         XS: "var(--XS)",
+
+        EM: "var(--EM)",
+        EXS: "var(--EXS)",
       },
       colors: {
         black: "var(--black)",

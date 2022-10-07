@@ -45,21 +45,25 @@ export default function Home() {
           id: 0,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'Portafolio',
+          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
         {
           id: 1,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'E-Commerce',
+          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
         {
           id: 2,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'Showroom',
+          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
         {
           id: 3,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'Landing Page',
+          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
       ]}/>
     </Layout>
