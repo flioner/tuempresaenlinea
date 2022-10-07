@@ -23,23 +23,23 @@ const Slider = ({ images }) => {
   });
 
   return (
-    <div className="keen-slider" ref={sliderRef}>
-      <div className={s.middle}>
-        {[...Array(images.length).keys()].map((idx) => {
-          return (
-            <div key={idx} className="keen-slider__slide">
-              <div className={s.slide}>
+    <div
+    ref={sliderRef}
+    className={cn('keen-slider', s.root, s.navigationWrapper)}
+  >
+    {images.map(({ id, src, path, alt = 'Product Image' }, idx) => (
+      <div className='keen-slider__slide' key={id}>
+ <div className={s.slide}>
                 <img
                   className={!images[idx][2] ? s.image : s.imageCrop}
                   src={images[idx][0]}
                 />
                 <div className={s.text}> {images[idx][1]} </div>
               </div>
-            </div>
-          );
-        })}
       </div>
-    </div>
+    ))}
+  </div>
+  
   );
 };
 
