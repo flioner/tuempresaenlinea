@@ -115,16 +115,18 @@ const VerticalSlider = ({ content }) => {
   const [sliderRef] = useKeenSlider(
     {
       initial: 0,
+
       breakpoints: {
         "(min-width: 1100px)": {
-          mode: "snap",
+          dragSpeed: 1,
         },
       },
-
-      mode: "free",
+      dragSpeed: 0.5,
+      mode: "snap",
       slides: { origin: "center", perView: 1.5, spacing: 10 },
       loop: true,
       vertical: true,
+      renderMode: "precision",
     },
     [
       (slider) => {
