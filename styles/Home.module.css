@@ -9,6 +9,7 @@
 }
 
 .middle {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -18,6 +19,7 @@
   @apply text-XL font-bold;
 }
 /* Sliders */
+
 .crop {
   width: 50%;
   display: flex;

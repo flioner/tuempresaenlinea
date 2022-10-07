@@ -36,9 +36,9 @@ export default function Home() {
   return (
     <Layout>
       <div className={s.middle}>
-        <div className={s.crop} /* Profile Slider */>
+ 
           <Slider images={images} />
-        </div>
+     
       </div>
 
 
