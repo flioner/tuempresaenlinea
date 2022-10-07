@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from "swiper";
+import { Mousewheel, Autoplay } from "swiper";
 import 'swiper/css';
 import s from './slider.module.css';
 
@@ -8,13 +8,19 @@ const ProfileSlider = ({ images }) => {
   return (
     <Swiper
       loop={true}
-   
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      
+  
       slidesPerView={3}
       centeredSlides={true}
       spaceBetween={15}
 
       mousewheel={true}
-      modules={[Mousewheel]}
+      modules={[Mousewheel, Autoplay]}
+    
     >
       {images.map(({ id, src, nombre }) => (
         <SwiperSlide  className={s.profileSlide}   key={id}>  
@@ -35,14 +41,19 @@ const VerticalSlider = ({ images }) => {
     <Swiper
       className={s.verticalCont}
       direction={"vertical"}
+
       loop={true}
+      autoplay={{
+        delay: 10000,
+        disableOnInteraction: false,
+      }}
       
       slidesPerView={1.5}
       centeredSlides={true}
       spaceBetween={15}
    
       mousewheel={true}
-      modules={[Mousewheel]}
+      modules={[Mousewheel, Autoplay]}
     >
       {images.map(({ id, src, titulo,desc }) => (
         <SwiperSlide  className={s.slide}   key={id}>  
