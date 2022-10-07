@@ -1,6 +1,8 @@
 import Layout from "../components/layout/layout";
 import { Slider, VerticalSlider, VerticalTest } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
+import React from 'react'
+
 
 export default function Home() {
   return (
@@ -11,7 +13,7 @@ export default function Home() {
             images={[
               [
                 "https://eddencei.sirv.com/profile%20pic/FabianLioner.jpg",
-                "Fabian Lioner",
+                "Fabian",
                 true,
               ],
               [

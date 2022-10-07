@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "jsx": "preserve",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,8 +17,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
+    "isolatedModules": true
   },
   "include": [
     "next-env.d.ts",

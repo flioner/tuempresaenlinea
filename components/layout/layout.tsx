@@ -1,9 +1,10 @@
+import React from 'react'
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 
 export const siteTitle = "Tu Empresa En Linea";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
     <div>
       <Head>
@@ -14,7 +15,8 @@ export default function Layout({ children, home }) {
         />
       </Head>
 
-      {<></>}
+      {<>
+      </>}
 
       <div className={s.globalContainer}>
         <main> {children}</main>
