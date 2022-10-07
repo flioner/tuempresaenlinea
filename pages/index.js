@@ -5,6 +5,20 @@ import s from "../styles/Home.module.css";
 export default function Home() {
   return (
     <Layout>
+      <div className={s.middle}>
+        <div className={s.crop} /* Profile Slider */>
+          <Slider
+            images={[
+              [
+                "https://eddencei.sirv.com/profile%20pic/FabianLioner.jpg",
+                "Fabian Lioner",
+                true,
+              ],
+            ]}
+          />
+        </div>
+      </div>
+
       <div className={s.cropVerticalGlow} /* Vertical Slider */>
         <VerticalSlider
           content={[
@@ -26,20 +40,6 @@ export default function Home() {
             ],
           ]}
         />
-      </div>
-
-      <div className={s.middle}>
-        <div className={s.crop} /* Profile Slider */>
-          <Slider
-            images={[
-              [
-                "https://eddencei.sirv.com/profile%20pic/FabianLioner.jpg",
-                "Fabian Lioner",
-                true,
-              ],
-            ]}
-          />
-        </div>
       </div>
     </Layout>
   );
