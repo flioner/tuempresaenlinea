@@ -40,7 +40,7 @@ const LaptopViewer = ({  }) => {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-          if (window.pageYOffset > 100 ) {
+          if (window.pageYOffset > 200 ) {
             Show();
           } 
         });
@@ -56,12 +56,6 @@ const LaptopViewer = ({  }) => {
         setView(true);
         setdelay(true);
       };
-
-      const ShowDelay = () => {
-        setTimeout(() => {
-            Show();
-          }, 1000);
-      };
       
     return (   
         
@@ -76,8 +70,8 @@ const LaptopViewer = ({  }) => {
     </div>
     <div  className={progress != 100 ? s.bg5 : s.bg4}> 
     <Loading progress={progress} />
-    <div onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
     </div>
+    <div onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
     </div>
     
     );
