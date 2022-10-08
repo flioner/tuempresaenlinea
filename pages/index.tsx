@@ -3,6 +3,9 @@ import { ProfileSlider, VerticalSlider } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
 import React from 'react'
 import Typewriter from 'typewriter-effect';
+import { LaptopViewer } from "../components/threejs/laptop";
+import { Loading } from "../components/loading/loading";
+
 
 export default function Home() {
   return (
@@ -13,7 +16,7 @@ export default function Home() {
           <div className={s.typewriter}>
             <Typewriter 
                 options={{
-                strings: ['Página Web', 'Tienda en línea', 'Portafolio Digital'],
+                strings: ['Página Web.', 'Tienda en línea.', 'Portafolio Digital.'],
                 autoStart: true,
                 loop: true,
               }}
@@ -51,9 +54,7 @@ export default function Home() {
       ]}/>
       </div>
 
-      <div /* TITLE */ className={s.middle} >
-        <div className={s.title}> Nuestros Desarrolladores Web </div>
-      </div>
+      <div className={s.middle} ><div className={s.title}> Nuestros Desarrolladores Web </div></div>
       
       <div /* PROFILE SLIDER */ className={s.middle} >
         <div className={s.crop}>
@@ -87,6 +88,9 @@ export default function Home() {
         </div>
       </div>
 
+      <div /* TITLE */ className={s.middle} ><div className={s.title}> Diseño Web para cualquier dispositivo </div></div>
+      <div onLoad={() => console.log('load')}> <LaptopViewer /></div>
+  
     </Layout>
   );
 }

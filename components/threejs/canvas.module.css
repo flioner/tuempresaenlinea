@@ -1,0 +1,50 @@
+.bg {
+  opacity: 100%;
+  transition: 1s;
+}
+
+.bg2 {
+  opacity: 0%;
+  transition: 1s;
+}
+
+@media (max-width: 700px) {
+  .bg3 {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    opacity: 0%;
+  }
+}
+@media (min-width: 700px) {
+  .bg3 {
+    display: none;
+  }
+}
+
+.bg4 {
+  display: none;
+}
+
+.bg5 {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 98;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: 100%;
+}
+
+@keyframes example {
+  from {
+    margin-top: 100px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
