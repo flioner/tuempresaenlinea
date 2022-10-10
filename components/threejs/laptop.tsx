@@ -28,7 +28,7 @@ const Laptop = (args) => {
 
    
       });
-    const gltf = useLoader(GLTFLoader, "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1665186581/scene_qfk2dg.glb");
+    const gltf = useLoader(GLTFLoader, "scene.glb");
     return <primitive ref={modelRef} object={gltf.scene} {...args} />;
   };
 
@@ -68,9 +68,6 @@ const LaptopViewer = ({  }) => {
       </Suspense>
     </Canvas> 
     </div>
-    <div  className={progress != 100 ? s.bg5 : s.bg4}> 
-    <Loading progress={progress} />
-    </div>
     <div onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
     </div>
     
@@ -82,3 +79,20 @@ const LaptopViewer = ({  }) => {
   
 //   <div  className={progress != 100 ? s.bg5 : s.bg4}> 
 // <div onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
+
+/*
+    <div>
+    <div onMouseEnter={() => Show()} className={delayed ? s.bg : s.bg2}> 
+    <Canvas camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows style={{ height: '40vw' , width: '100vw'} }  >
+      <Suspense fallback={<Loader />}>
+      <ambientLight /> 
+        <Laptop position={[0.1, -0.3, delayed ? 1 : 0]} scale={0.3} rotation={[delayed ? 0.3 : 0, delayed ? -0.3: 0, 0]} />   
+      </Suspense>
+    </Canvas> 
+    </div>
+    <div  className={progress != 100 ? s.bg5 : s.bg4}> 
+    <Loading progress={progress} />
+    </div>
+    <div onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
+    </div>
+*/
