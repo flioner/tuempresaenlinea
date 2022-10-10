@@ -28,29 +28,33 @@
 .hidden {
   display: none;
 }
+
 /* Landing Page*/
 .landingContainer {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: max(min(30vw, 550px), 100px);
-  animation: fadeIn 1s;
+  animation: fadeIn 1.2s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
+
 .landingText {
   width: 100%;
   display: flex;
   font-size: var(--4XL);
   font-weight: 700;
   margin: max(min(10vw, 100px), 20px);
+  z-index: 99;
 }
 
 .typewriter {
   font-weight: 500;
   color: var(--darkergrey);
+  z-index: 99;
 }
 
 /* Text */

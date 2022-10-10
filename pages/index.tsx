@@ -5,7 +5,7 @@ import React from 'react'
 import Typewriter from 'typewriter-effect';
 import { LaptopViewer } from "../components/threejs/laptop";
 import { Loading } from "../components/loading/loading";
-
+import { VantaBG } from "../components/threejs/VantaJS";
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <VantaBG />
       </div>
 
       <div  /* VERTICAL SLIDER */ className={s.verticalGlow}>
@@ -89,8 +90,6 @@ export default function Home() {
       </div>
 
       <div /* TITLE */ className={s.middle} ><div className={s.title}> Diseño Web para cualquier dispositivo </div></div>
-      <div onLoad={() => console.log('load')}> <LaptopViewer /></div>
-  
     </Layout>
   );
 }
