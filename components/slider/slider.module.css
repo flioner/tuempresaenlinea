@@ -48,6 +48,7 @@
 .verticalCont {
   width: 100%;
   max-height: max(min(30vw, 600px), 190px);
+  background-color: var(--lightergrey);
 }
 
 @media (max-width: 400px) {
@@ -55,7 +56,6 @@
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: var(--lightergrey);
     box-shadow: var(--extraglow);
   }
 

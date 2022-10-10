@@ -51,7 +51,7 @@
 
 .vanta {
   position: absolute;
-  top: 0;
+  top: 0px;
   z-index: 0;
   height: max(min(30vw, 550px), 100px);
   width: 100%;
