@@ -13,7 +13,7 @@ const VantaBG = () => {
         WAVES({
           el: vantaRef.current,
           THREE: THREE,
-          color: 0xffffff,
+          color: 0xdfdfdf,
           mouseControls: false,
           touchControls: false,
           gyroControls: false,
