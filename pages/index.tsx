@@ -4,7 +4,7 @@ import s from "../styles/Home.module.css";
 import React from 'react'
 import Typewriter from 'typewriter-effect';
 import { LaptopViewer } from "../components/threejs/canvas";
-import { VantaBG } from "../components/threejs/vantajs";
+import { VantaBG } from "../components/threejs/vanta";
 import { ObjViewer } from "../components/threejs/threejs";
 
 export default function Home() {

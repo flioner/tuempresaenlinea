@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/threejs/vantajs.jsx"  ],
+, "components/threejs/vanta.jsx"  ],
   "exclude": [
     "node_modules"
   ]
