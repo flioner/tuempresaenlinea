@@ -16,17 +16,21 @@
     height: 100%;
     width: 100%;
     background-color: green;
-    opacity: 0%;
+    opacity: 50%; /* 0%  */
   }
 }
 @media (min-width: 700px) {
   .bg3 {
-    display: none;
+    background-color: yellow; /* none  */
+    opacity: 50%; /* none  */
+    display: block; /* none  */
   }
 }
 
 .bg4 {
-  display: none;
+  background-color: blue; /* none  */
+  opacity: 50%; /* none  */
+  display: block; /* none  */
 }
 
 .bg5 {
@@ -36,8 +40,8 @@
   z-index: 98;
   height: 100%;
   width: 100%;
-  background-color: white;
-  opacity: 100%;
+  background-color: red; /*white  */
+  opacity: 50%; /* 100%  */
 }
 
 @keyframes example {
