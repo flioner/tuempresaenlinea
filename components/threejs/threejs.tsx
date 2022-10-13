@@ -43,11 +43,9 @@ const ObjViewer = ({ objPath, scale, position, rotation }) => {
 export {ObjViewer};
 
 
-const ProductViewer = ({ objPath, scale, position, rotation, lightPosition, globalProgress}) => {
+const ProductViewer = ({ objPath, scale, position, rotation, lightPosition, /* globalProgress */}) => {
   const { progress } = useProgress();
-
-
-
+/*
   const loadStatus = () => {
     for (let i = 0; i < 150; i++) 
     {
@@ -65,9 +63,10 @@ const ProductViewer = ({ objPath, scale, position, rotation, lightPosition, glob
       globalProgress(true);
     }
   };
+  */
 
     return (
-      <Canvas className={s.onLoad} onAnimationStart={() => loadStatus()} camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows   >
+      <Canvas /* className={s.onLoad} onAnimationStart={() => loadStatus()} */ camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows   >
         <Suspense  fallback={<Loader />}>
         <ambientLight /> 
         <pointLight position={lightPosition} /> 

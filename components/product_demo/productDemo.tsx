@@ -17,6 +17,7 @@ import { IncreasePrice } from "./increase_price";
 
       
     /* LoadStates*/ 
+    /*
     const [initial, setInitial] = useState(true);
     const [progress, setProgress] = useState(false);
 
@@ -25,7 +26,7 @@ import { IncreasePrice } from "./increase_price";
           setInitial(false);
         }, 10000);
       };
-
+    */
       
     /* Product Demo Config */
     const [isImage, setImage] = useState(!is3D);
@@ -33,11 +34,11 @@ import { IncreasePrice } from "./increase_price";
 
         return ( 
             <div> 
-            <div className={s.middle} onAnimationStart={()=> checkLoaded()}> 
+            <div className={s.middle} /* onAnimationStart={()=> checkLoaded()} */> 
                 <div className={lightmode ? s.flexContLight : s.flexCont}>  
               <div className={s.canvasCont}> 
                   {!isImage ? 
-                  <ProductViewer objPath={ objPath } position={position} scale={scale} rotation={rotation} lightPosition = {lightPosition} globalProgress={setProgress}/> 
+                  <ProductViewer objPath={ objPath } position={position} scale={scale} rotation={rotation} lightPosition = {lightPosition} /* globalProgress={setProgress} *//> 
                   : <img className={s.img} src={imgPath}/>}
               </div>
     
@@ -76,7 +77,14 @@ import { IncreasePrice } from "./increase_price";
             </div>      
             </div> 
             </div>
+                    
+             </div> 
+        ); 
+  };
   
+  export { ProductDemo };
+
+          /*
             <div className={s.middle}>
                 {!initial && !progress && !isImage && warningOpen ?    
                 <div className={lightmode ? s.warningLight : s.warning}>
@@ -85,11 +93,5 @@ import { IncreasePrice } from "./increase_price";
                     <img onClick = {()=>setWarning(false)}className={s.closeIcon} src="closeIcon.png"  />
                 </div> : null }
             </div>
-                    
-             </div> 
-        ); 
-  };
-  
-  export { ProductDemo };
-
+            */
  
