@@ -43,28 +43,25 @@ const ObjViewer = ({ objPath, scale, position, rotation }) => {
 export {ObjViewer};
 
 
-const ProductViewer = ({ objPath, scale, position, rotation, lightPosition, globalProgress }) => {
+const ProductViewer = ({ objPath, scale, position, rotation, lightPosition, globalProgress}) => {
   const { progress } = useProgress();
-  const [loaded, setLoadState] = useState(false);
-  const [initial, setInitial] = useState(true);
+
 
 
   const loadStatus = () => {
-    for (let i = 0; i < 15; i++) 
+    for (let i = 0; i < 150; i++) 
     {
       setTimeout(() => 
       {  
         if (progress == 100) 
         {
-          setLoadState(true);
           globalProgress(true);
         }
         console.log(progress);
-      }, 2000);
+      }, 100);
     };
     if (progress == 100) 
     {
-      setLoadState(true);
       globalProgress(true);
     }
   };
