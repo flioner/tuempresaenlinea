@@ -2,6 +2,8 @@
 .middle {
   display: flex;
   justify-content: center;
+  animation: onLoad 1s;
+  animation-delay: 10s;
 }
 .flexCont {
   display: flex;
@@ -76,7 +78,7 @@
     max(min(2vw, 20px), 12px) 0px;
   border-radius: 10px;
   background-color: var(--lightergrey);
-  padding: max(min(2vw, 20px), 12px) max(min(2vw, 20px), 15px);
+  padding: max(min(1vw, 20px), 7px) max(min(2vw, 20px), 15px);
 }
 
 /* Text */
@@ -154,4 +156,77 @@
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
   transition: 0.3s;
+}
+
+/* On Load */
+@keyframes onLoad {
+  from {
+    font-strerch: normal;
+  }
+  to {
+    font-strerch: normal;
+  }
+}
+
+/* Warning */
+
+.warning {
+  position: relative;
+  background-color: var(--lightgrey);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  max-height: max(min(30vw, 400px), 200px);
+  border-radius: 10px;
+  margin: max(min(1vw, 20px), 7px) max(min(2vw, 20px), 12px);
+  padding: max(min(2vw, 20px), 12px);
+  animation: opacityIn 1s;
+}
+
+.warningLight {
+  position: relative;
+  background-color: var(--lightergrey);
+  display: flex;
+  width: 100%;
+  max-width: 1160px;
+  max-height: max(min(30vw, 400px), 200px);
+  border-radius: 10px;
+  margin: max(min(1vw, 20px), 7px) max(min(4vw, 40px), 12px);
+  padding: max(min(2vw, 20px), 12px);
+  animation: opacityIn 1s;
+}
+.warningText {
+  padding: max(min(0.5vw, 10px), 3px) 0 0 max(min(0.8vw, 12px), 5px);
+  font-size: max(min(1.4vw, 1.2rem), 0.7rem);
+}
+
+.warningButton {
+  padding: max(min(0.5vw, 10px), 3px) 0 0 max(min(0.8vw, 12px), 5px);
+  font-size: max(min(1.4vw, 1.3rem), 0.7rem);
+  font-weight: bold;
+}
+
+.warningButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.closeIcon {
+  height: max(min(1.9vw, 20px), 12px);
+  position: absolute;
+  right: max(min(1.9vw, 20px), 12px);
+}
+.closeIcon:hover {
+  cursor: pointer;
+}
+
+/* Opacity In*/
+@keyframes opacityIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    pacity: 100%;
+  }
 }

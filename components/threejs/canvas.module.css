@@ -42,6 +42,11 @@
   opacity: 100%; /* 100%  */
 }
 
+.onLoad {
+  animation: onLoad 1s;
+  animation-delay: 1s;
+}
+
 @keyframes example {
   from {
     margin-top: 100px;
@@ -53,9 +58,9 @@
 
 @keyframes onLoad {
   from {
-    background-color: green;
+    font-strerch: normal;
   }
   to {
-    background-color: yellow;
+    font-strerch: normal;
   }
 }

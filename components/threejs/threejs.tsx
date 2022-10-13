@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Suspense, useRef } from 'react';
 import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import {  Html, useGLTF, useProgress, OrbitControls } from '@react-three/drei';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import s from './threejs.module.css';
+import s from './canvas.module.css';
 
 
 
 function Loader() {
     const { progress } = useProgress();
-    return <Html center>{progress} % loaded</Html>;
+ 
+    return <Html center>Cargando: {progress}%</Html>;
 };
 
 const ObjLoader = (args, objPath) => { 
@@ -42,18 +43,42 @@ const ObjViewer = ({ objPath, scale, position, rotation }) => {
 export {ObjViewer};
 
 
-const ProductViewer = ({ objPath, scale, position, rotation, lightPosition }) => {
+const ProductViewer = ({ objPath, scale, position, rotation, lightPosition, globalProgress }) => {
+  const { progress } = useProgress();
+  const [loaded, setLoadState] = useState(false);
+  const [initial, setInitial] = useState(true);
 
-  return (
-      <Canvas camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows   >
-        <Suspense fallback={<Loader />}>
+
+  const loadStatus = () => {
+    for (let i = 0; i < 15; i++) 
+    {
+      setTimeout(() => 
+      {  
+        if (progress == 100) 
+        {
+          setLoadState(true);
+          globalProgress(true);
+        }
+        console.log(progress);
+      }, 2000);
+    };
+    if (progress == 100) 
+    {
+      setLoadState(true);
+      globalProgress(true);
+    }
+  };
+
+    return (
+      <Canvas className={s.onLoad} onAnimationStart={() => loadStatus()} camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows   >
+        <Suspense  fallback={<Loader />}>
         <ambientLight /> 
         <pointLight position={lightPosition} /> 
         <OrbitControls />
           <ObjLoader objPath={ objPath } position={position} scale={scale} rotation={rotation} /> 
         </Suspense>
-      </Canvas> 
-  );
+      </Canvas> )
+
 };
 
 export {ProductViewer};
