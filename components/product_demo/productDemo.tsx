@@ -15,29 +15,12 @@ import { IncreasePrice } from "./increase_price";
         setOption(true);
       };
 
-      
-    /* LoadStates*/ 
-    /*
-    const [initial, setInitial] = useState(true);
-    const [progress, setProgress] = useState(false);
-
-    const checkLoaded = () => {
-        setTimeout(() => {
-          setInitial(false);
-        }, 10000);
-      };
-    */
-      
-    /* Product Demo Config */
-    const [isImage, setImage] = useState(!is3D);
-    const [warningOpen, setWarning] = useState(true);
-
         return ( 
             <div> 
             <div className={s.middle} /* onAnimationStart={()=> checkLoaded()} */> 
                 <div className={lightmode ? s.flexContLight : s.flexCont}>  
               <div className={s.canvasCont}> 
-                  {!isImage ? 
+                  {is3D ? 
                   <ProductViewer objPath={ objPath } position={position} scale={scale} rotation={rotation} lightPosition = {lightPosition} /* globalProgress={setProgress} *//> 
                   : <img className={s.img} src={imgPath}/>}
               </div>
@@ -76,9 +59,8 @@ import { IncreasePrice } from "./increase_price";
                 </div> 
             </div>      
             </div> 
-            </div>
-                    
-             </div> 
+            </div>      
+            </div> 
         ); 
   };
   
