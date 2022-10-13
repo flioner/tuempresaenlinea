@@ -68,7 +68,7 @@ const LaptopViewer = ({  }) => {
       </Suspense>
     </Canvas> 
     </div>
-    <div onScroll={() => Show()} onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
+    <div onScrollCapture={() => Show()} onMouseEnter={() => Show()} className={!delayed ? s.bg3 : s.bg4}>  </div>
     </div>
     
     );
