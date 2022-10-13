@@ -20,7 +20,7 @@ const ObjLoader = (args, objPath) => {
             modelRef.current.rotation.y -= 0.00075;
           }
       });
-    const gltf = useGLTF("waterbottle_tuempresaenlinea_compressed.glb", "https://www.gstatic.com/draco/v1/decoders/");
+    const gltf = useGLTF("waterbottle.glb", "https://www.gstatic.com/draco/v1/decoders/");
     return <primitive ref={modelRef} object={gltf.scene} {...args} />;
   };
 
@@ -42,13 +42,13 @@ const ObjViewer = ({ objPath, scale, position, rotation }) => {
 export {ObjViewer};
 
 
-const ProductViewer = ({ objPath, scale, position, rotation }) => {
+const ProductViewer = ({ objPath, scale, position, rotation, lightPosition }) => {
 
   return (
       <Canvas camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows   >
         <Suspense fallback={<Loader />}>
         <ambientLight /> 
-        <pointLight /> 
+        <pointLight position={lightPosition} /> 
         <OrbitControls />
           <ObjLoader objPath={ objPath } position={position} scale={scale} rotation={rotation} /> 
         </Suspense>

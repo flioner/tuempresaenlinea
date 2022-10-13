@@ -4,7 +4,7 @@ import { ProductViewer } from "../threejs/threejs";
 import { IncreasePrice } from "./increase_price";
 
 
-  const ProductDemo = ({ lightmode, is3D, imgPath, objPath, scale, position, rotation }) => {
+  const ProductDemo = ({ lightmode, is3D, imgPath, objPath, scale, position, rotation, lightPosition }) => {
     const [selected, setOption] = useState(false);
     const [loaded, setLoadState] = useState(false);
   
@@ -23,7 +23,7 @@ import { IncreasePrice } from "./increase_price";
             <div className={s.middle}> 
                 <div className={lightmode ? s.flexContLight : s.flexCont}>  
               <div className={s.canvasCont}> 
-                <ProductViewer objPath={ objPath } position={position} scale={scale} rotation={rotation} />
+                <ProductViewer objPath={ objPath } position={position} scale={scale} rotation={rotation} lightPosition = {lightPosition} />
               </div>
     
               <div className={s.textCont}>  
