@@ -78,11 +78,11 @@ import { IncreasePrice } from "./increase_price";
             </div> 
 
             <div> 
-                {!isImage && warningOpen ?         
+                {!isImage?         
                     <div> 
                     {progress ? null : 
                         <div className={s.middle}>
-                            {initial ? null :   
+                            {initial && warningOpen  ? null :   
                                 <div className={lightmode ? s.warningLight : s.warning}>
                                     <div className={s.warningText}> Parece que el modelo 3D se está tardando en cargar. </div>
                                     <div onClick = {()=>setImage(true)} className={s.warningButton}> Cambiar a la vista de imagen </div>
