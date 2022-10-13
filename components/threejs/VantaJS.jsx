@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import WAVES from 'vanta/dist/vanta.waves.min'
 import * as THREE from "three";
-import s from "./canvas.module.css";
+import s from "./vantajs.module.css";
 
 const VantaBG = () => {
   const [vantaEffect, setVantaEffect] = useState(0);

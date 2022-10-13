@@ -80,13 +80,7 @@
     font-weight: bold;
     margin: 0px max(min(4vw, 80px), 25px);
     color: var(--darkgrey);
-  }
-
-  .verticalDesc {
-    text-align: justify;
-    font-size: var(--EXXS);
-    margin: max(min(1vw, 30px), 0px) max(min(4vw, 80px), 25px);
-    color: var(--darkgrey);
+    text-decoration: none;
   }
 }
 
@@ -120,6 +114,7 @@
     font-weight: bold;
     margin: 0px max(min(4vw, 80px), 25px);
     color: var(--darkgrey);
+    text-decoration: none;
   }
 
   .verticalDesc {
@@ -128,6 +123,10 @@
     margin: max(min(1vw, 30px), 0px) max(min(4vw, 80px), 25px);
     color: var(--darkgrey);
   }
+}
+
+.verticalTitle:hover {
+  text-decoration: underline;
 }
 
 .verticalCenter {

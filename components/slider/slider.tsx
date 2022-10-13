@@ -55,13 +55,15 @@ const VerticalSlider = ({ images }) => {
       mousewheel={true}
       modules={[Mousewheel, Autoplay]}
     >
-      {images.map(({ id, src, titulo,desc }) => (
+      {images.map(({ id, src, titulo, desc, url }) => (
         <SwiperSlide  className={s.slide}   key={id}>  
             <div className={s.verticalSlide}>
               <img className={s.verticalImg} src={src} />
               <div className={s.verticalTextCont}>
               <div className={s.verticalCenter}> 
-                  <div className={s.verticalTitle}>{titulo}</div>
+                    <a href={url}>
+                    <div className={s.verticalTitle}>{titulo}</div>
+                    </a>
                     <div className={s.verticalDesc}>{desc}</div>
                   </div>   
                 </div> 

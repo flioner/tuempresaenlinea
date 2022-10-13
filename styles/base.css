@@ -15,11 +15,12 @@
   --XXXL: max(min(2.7vw, 3rem), 2rem);
   --XXL: max(min(2.5vw, 2.5rem), 1.7rem);
   --XL: max(min(2.3vw, 2.2rem), 1.5rem);
-  --LG: max(min(2.2vw, 1.9rem), 1.1rem);
-  --L: max(min(2.2vw, 1.8rem), 0.95rem);
-  --M: max(min(1.9vw, 1.5rem), 0.9rem);
-  --S: max(min(1.7vw, 1.2rem), 0.85rem);
-  --XS: max(min(1vw, 1rem), 0.8rem);
+  --LG: max(min(2.2vw, 1.9rem), 1.05rem);
+  --L: max(min(2.2vw, 1.8rem), 0.9rem);
+  --M: max(min(1.9vw, 1.5rem), 0.85rem);
+  --S: max(min(1.7vw, 1.2rem), 0.8rem);
+  --XS: max(min(1vw, 1rem), 0.75rem);
+  --XXS: max(min(1vw, 1rem), 0.7rem);
 
   /* Extra font sizes */
   @media (max-width: 400px) {
@@ -29,7 +30,9 @@
     --4XL: max(min(3.5vw, 4rem), 1.4rem);
   }
   --EM: max(min(2.5vw, 2.2rem), 1rem);
+  --EMS: max(min(2.5vw, 2.2rem), 0.9rem);
   --ES: max(min(2.2vw, 2rem), 0.8rem);
+  --ESM: max(min(2vw, 2rem), 0.75rem);
   --EXS: max(min(1.5vw, 1.8rem), 0.7rem);
   --EXXS: max(min(1.2vw, 1.3rem), 0.55rem);
 

@@ -3,9 +3,8 @@ import { ProfileSlider, VerticalSlider } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
 import React from 'react'
 import Typewriter from 'typewriter-effect';
-import { LaptopViewer } from "../components/threejs/laptop";
-import { Loading } from "../components/loading/loading";
-import { VantaBG } from "../components/threejs/VantaJS";
+import { LaptopViewer } from "../components/threejs/canvas";
+import { VantaBG } from "../components/threejs/vantajs";
 import { ObjViewer } from "../components/threejs/threejs";
 
 export default function Home() {
@@ -33,24 +32,28 @@ export default function Home() {
           id: 0,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'Portafolio',
+          url: '/portafolio',
           desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
         {
           id: 1,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'E-Commerce',
+          url: '/ecommerce',
           desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
         {
           id: 2,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'Showroom',
+          url: '/showroom',
           desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
         {
           id: 3,
           src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
           titulo: 'Landing Page',
+          url: '/landingpage',
           desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
         },
       ]}/>
