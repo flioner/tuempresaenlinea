@@ -75,10 +75,7 @@ import { IncreasePrice } from "./increase_price";
                 </div> 
             </div>      
             </div> 
-            </div> 
-            <div> 
-                {initial ? "initial" : "full"} {progress ? "loaded" : "failed"} {!isImage ? "is3d" : "no isImg"} {warningOpen ? "warning" : "no warning"}
-            </div> 
+            </div>
   
             <div className={s.middle}>
                 {!initial && !progress && !isImage && warningOpen ?    
