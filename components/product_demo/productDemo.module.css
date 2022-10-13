@@ -9,8 +9,9 @@
 
   width: 100%;
   max-width: 1200px;
-  max-height: max(min(30vw, 400px), 200px);
-
+  height: auto;
+  max-height: max(min(30vw, 450px), 250px);
+  padding-bottom: max(min(5.5vw, 40px), 18px);
   border-radius: 10px;
   margin: max(min(2vw, 20px), 12px);
 }
@@ -20,7 +21,6 @@
   width: 100%;
   max-width: 1200px;
   max-height: max(min(30vw, 400px), 200px);
-
   border-radius: 10px;
   margin: max(min(2vw, 20px), 12px);
 }
@@ -38,7 +38,7 @@
   .canvasContLight {
     width: 35%;
     height: 100%;
-    background-color: var(--lightergrey);
+    background-color: var(--grey);
     margin: max(min(2vw, 20px), 12px);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
@@ -50,7 +50,7 @@
   .canvasCont {
     width: 40%;
     height: 100%;
-    max-height: max(min(30vw, 400px), 190px);
+    max-height: max(min(30vw, 500px), 250px);
     background-color: var(--white);
     margin: max(min(2vw, 20px), 12px);
     border-radius: 10px;
@@ -61,7 +61,7 @@
     width: 40%;
     height: 100%;
     max-height: max(min(30vw, 400px), 190px);
-    background-color: var(--lightergrey);
+    background-color: var(--grey);
     margin: max(min(2vw, 20px), 12px);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
