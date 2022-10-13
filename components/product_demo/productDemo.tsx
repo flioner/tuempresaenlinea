@@ -77,26 +77,18 @@ import { IncreasePrice } from "./increase_price";
             </div> 
             </div> 
             <div> 
-                {initial} {progress} {warningOpen}
+                {initial ? "initial" : "full"} {progress ? "loaded" : "failed"} {!isImage ? "is3d" : "no isImg"} {warningOpen ? "warning" : "no warning"}
             </div> 
-
-            <div> 
-                {!isImage && warningOpen ?         
-                    <div> 
-                    {progress ? null : 
-                        <div className={s.middle}>
-                            {initial ? null :   
-                                <div className={lightmode ? s.warningLight : s.warning}>
-                                    <div className={s.warningText}> Parece que el modelo 3D se está tardando en cargar. </div>
-                                    <div onClick = {()=>setImage(true)} className={s.warningButton}> Cambiar a la vista de imagen </div>
-                                    <img onClick = {()=>setWarning(false)}className={s.closeIcon} src="closeIcon.png"  />
-                                </div> }
-                        </div>
-                    } 
-                    </div> 
-                : null
-                } 
+  
+            <div className={s.middle}>
+                {!initial && !progress && !isImage && warningOpen ?    
+                <div className={lightmode ? s.warningLight : s.warning}>
+                    <div className={s.warningText}> Parece que el modelo 3D se está tardando en cargar. </div>
+                    <div onClick = {()=>setImage(true)} className={s.warningButton}> Cambiar a la vista de imagen </div>
+                    <img onClick = {()=>setWarning(false)}className={s.closeIcon} src="closeIcon.png"  />
+                </div> : null }
             </div>
+                    
              </div> 
         ); 
   };
