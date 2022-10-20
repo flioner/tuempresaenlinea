@@ -69,19 +69,23 @@ export default function Home() {
               id: 0,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298576/tuempresaenlinea/Devs/FabianLioner_Cropped_xd3pb3.jpg",
               nombre: "Fabián",
-              universidad: "icons/ITESM.png",
+              universidad:
+                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
               urlUniversidad:
                 "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
-              social: "icons/LinkedIn.png",
+              social:
+                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
               socialUrl: "https://www.linkedin.com/in/fabianlioner/",
             },
             {
               id: 1,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298536/tuempresaenlinea/Devs/Gabriel_Caballero_hcxxay.jpg",
               nombre: "Gabriel",
-              universidad: "icons/McGill.jpg",
+              universidad:
+                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/McGill_mdsgym.jpg",
               urlUniversidad: "https://www.mcgill.ca/",
-              social: "icons/LinkedIn.png",
+              social:
+                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
               socialUrl: "https://www.linkedin.com/in/gabbrousset/",
             },
             {
