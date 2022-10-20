@@ -15,14 +15,14 @@ const Laptop = (args) => {
     const modelRef = useRef(args);
     useFrame(() => {
         if (modelRef.current.rotation.y < 0) {
-            modelRef.current.rotation.y += 0.00075;
+            modelRef.current.rotation.y += 0.00050;
           }
    
         if (modelRef.current.rotation.x > 0) {
-            modelRef.current.rotation.x -= 0.00075;
+            modelRef.current.rotation.x -= 0.00050;
           }
         if (modelRef.current.position.z > 0) {
-          modelRef.current.position.z -= 0.0025;
+          modelRef.current.position.z -= 0.0017;
         }
 
 
@@ -61,7 +61,7 @@ const LaptopViewer = ({  }) => {
         
     <div>
     <div onMouseEnter={() => Show()} className={delayed ? s.bg : s.bg2}> 
-    <Canvas camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows style={{ height: '40vw' , width: '100vw'} }  >
+    <Canvas camera={{fov: 15, near: 0.1, far: 1000, z: 5,}} shadows style={{ height: '40vw' , width: '100%', maxHeight:'750px'} }  >
       <Suspense fallback={<Loader />}>
       <ambientLight /> 
         <Laptop position={[0.1, -0.3, delayed ? 1 : 0]} scale={0.3} rotation={[delayed ? 0.3 : 0, delayed ? -0.3: 0, 0]} />   

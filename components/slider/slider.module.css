@@ -32,22 +32,58 @@
 }
 /* Profile Slider */
 .profileSlide {
+  position: relative;
   height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 .imageCrop {
+  height: auto;
+  width: 100%;
   max-height: max(min(10vw, 170px), 100px);
+  max-width: max(min(10vw, 170px), 100px);
   margin: 10px 20px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
+.profileModal {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: max(min(25vw, 340px), 200px);
+  height: 95%;
+  background-color: var(--white);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.modalImg {
+  position: relative;
+  z-index: 2;
+  height: 60%;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.url {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 /* Vertical Slider */
 
 .verticalCont {
   width: 100%;
-  max-height: max(min(30vw, 600px), 190px);
+  max-height: max(min(35vw, 650px), 200px);
   background-color: var(--white);
 }
 

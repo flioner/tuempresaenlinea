@@ -34,7 +34,7 @@ import { IncreasePrice } from "./increase_price";
                    Una breve descripción de tu producto.
                 </div> 
     
-                <div className={s.subTitle}>  Version </div>   
+                <div className={s.subTitle}>  Versión </div>   
                 <div className={s.buttons}> 
                     <button
                     onClick={defaultOpt}

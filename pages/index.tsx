@@ -1,22 +1,26 @@
 import Layout from "../components/layout/layout";
 import { ProfileSlider, VerticalSlider } from "../components/slider/slider";
 import s from "../styles/Home.module.css";
-import React from 'react'
-import Typewriter from 'typewriter-effect';
+import React from "react";
+import Typewriter from "typewriter-effect";
 import { LaptopViewer } from "../components/threejs/canvas";
 import { VantaBG } from "../components/threejs/vanta";
 import { ObjViewer } from "../components/threejs/threejs";
-
+import { Modal } from "../components/modal/modal";
 export default function Home() {
   return (
-    <Layout> 
+    <Layout>
       <div /* TYPEWRITER */ className={s.landingContainer}>
         <div className={s.landingText}>
-        Empieza tu &nbsp;
+          Empieza tu &nbsp;
           <div className={s.typewriter}>
-            <Typewriter 
-                options={{
-                strings: ['Página Web.', 'Tienda en línea.', 'Portafolio Digital.'],
+            <Typewriter
+              options={{
+                strings: [
+                  "Página Web.",
+                  "Tienda en línea.",
+                  "Portafolio Digital.",
+                ],
                 autoStart: true,
                 loop: true,
               }}
@@ -26,75 +30,89 @@ export default function Home() {
         <VantaBG />
       </div>
 
-      <div  /* VERTICAL SLIDER */ className={s.verticalGlow}>
-      <VerticalSlider images ={[
-        {
-          id: 0,
-          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
-          titulo: 'Portafolio',
-          url: '/portafolio',
-          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
-        },
-        {
-          id: 1,
-          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
-          titulo: 'E-Commerce',
-          url: '/ecommerce',
-          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
-        },
-        {
-          id: 2,
-          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
-          titulo: 'Showroom',
-          url: '/showroom',
-          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
-        },
-        {
-          id: 3,
-          src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg',
-          titulo: 'Landing Page',
-          url: '/landingpage',
-          desc: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl',
-        },
-      ]}/>
-      </div>
-
-      <div className={s.middle} ><div className={s.title}> Nuestros Desarrolladores Web </div></div>
-      
-      <div /* PROFILE SLIDER */ className={s.middle} >
-        <div className={s.crop}>
-          <ProfileSlider images ={[
+      <div /* VERTICAL SLIDER */ className={s.verticalGlow}>
+        <VerticalSlider
+          images={[
             {
               id: 0,
-              src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp',
-              nombre: 'Dev 1',
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298728/tuempresaenlinea/Carousel/carousel_Portfolio_i6dwfg.jpg",
+              titulo: "Portafolio",
+              url: "/portafolio",
+              desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
             {
               id: 1,
-              src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp',
-              nombre: 'Dev 2'
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298822/tuempresaenlinea/Carousel/carousel_Ecommerce_hk3d4o.jpg",
+              titulo: "E-Commerce",
+              url: "/ecommerce",
+              desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
             {
               id: 2,
-              src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp',
-              nombre: 'Dev 3'
+              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",
+              titulo: "Showroom",
+              url: "/showroom",
+              desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
+            },
+          ]}
+        />
+      </div>
+
+      <div className={s.middle}>
+        <div className={s.title}> Nuestros Desarrolladores Web </div>
+      </div>
+
+      <div className={s.crop}>
+        <ProfileSlider
+          images={[
+            {
+              id: 0,
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298576/tuempresaenlinea/Devs/FabianLioner_Cropped_xd3pb3.jpg",
+              nombre: "Fabián",
+              universidad: "/icons/ITESM.png",
+              urlUniversidad:
+                "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+              social: "/icons/LinkedIn.png",
+              socialUrl: "https://www.linkedin.com/in/fabianlioner/",
+            },
+            {
+              id: 1,
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298536/tuempresaenlinea/Devs/Gabriel_Caballero_hcxxay.jpg",
+              nombre: "Gabriel",
+              universidad: "/icons/McGill.jpg",
+              urlUniversidad: "https://www.mcgill.ca/",
+              social: "/icons/LinkedIn.png",
+              socialUrl: "https://www.linkedin.com/in/gabbrousset/",
+            },
+            {
+              id: 2,
+              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
+              nombre: "Dev 3",
             },
             {
               id: 3,
-              src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp',
-              nombre: 'Dev 4'
+              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
+              nombre: "Dev 4",
             },
             {
               id: 4,
-              src: 'https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp',
-              nombre: 'Dev 5'
+              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
+              nombre: "Dev 5",
             },
-          ]}/>
-        </div>
+          ]}
+        />
       </div>
 
-      <div /* TITLE */ className={s.middle} ><div className={s.title}> Diseño Web para cualquier dispositivo </div></div>
+      <div /* TITLE */ className={s.middle}>
+        <div className={s.title}> Diseño Web para cualquier dispositivo </div>
+      </div>
       <LaptopViewer />
+      <div /* Description (Canvas) */ className={s.middle}>
+        <div className={s.canvasDesc}>
+          Páginas web que se ven bien tanto en dispositivos móbiles, como de
+          escritorio
+        </div>
+      </div>
     </Layout>
   );
 }
