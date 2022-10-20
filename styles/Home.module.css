@@ -75,14 +75,35 @@
 }
 
 /* Sliders */
-@media (max-width: 1000px) {
+@media (max-width: 700px) {
   .crop {
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
     transition: 0.5s;
+  }
+}
+@media (min-width: 700px) {
+  .crop {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+  }
+}
+@media (max-width: 1000px) {
+  .canvasDesc {
+    width: 90%;
+    text-align: center;
+    font-size: var(--M);
+    position: absolute;
+    top: -30px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.9);
   }
   .canvasDesc {
     width: 90%;
