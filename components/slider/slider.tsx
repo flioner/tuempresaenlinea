@@ -70,14 +70,24 @@ const ProfileSlider = ({ images }) => {
               setOpen={setIsOpen}
             >
               <div className={s.profileModal}>
-                <a className={s.url} href={urlUniversidad} target="_blank">
+                <a
+                  className={s.url}
+                  href={urlUniversidad}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     className={universidad != null ? s.modalImg : s.hidden}
                     src={universidad}
                   />
                 </a>
 
-                <a className={s.url} href={socialUrl} target="_blank">
+                <a
+                  className={s.url}
+                  href={socialUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     className={social != null ? s.modalImg : s.hidden}
                     src={social}
