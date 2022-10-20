@@ -68,24 +68,23 @@ const ProfileSlider = ({ images }) => {
                 (universidad != null || social != null)
               }
               setOpen={setIsOpen}
-              children={
-                <div className={s.profileModal}>
-                  <a className={s.url} href={urlUniversidad}>
-                    <img
-                      className={universidad != null ? s.modalImg : s.hidden}
-                      src={universidad}
-                    />
-                  </a>
+            >
+              <div className={s.profileModal}>
+                <a className={s.url} href={urlUniversidad} target="_blank">
+                  <img
+                    className={universidad != null ? s.modalImg : s.hidden}
+                    src={universidad}
+                  />
+                </a>
 
-                  <a className={s.url} href={socialUrl}>
-                    <img
-                      className={social != null ? s.modalImg : s.hidden}
-                      src={social}
-                    />
-                  </a>
-                </div>
-              }
-            />
+                <a className={s.url} href={socialUrl} target="_blank">
+                  <img
+                    className={social != null ? s.modalImg : s.hidden}
+                    src={social}
+                  />
+                </a>
+              </div>
+            </Modal>
           </SwiperSlide>
         )
       )}
