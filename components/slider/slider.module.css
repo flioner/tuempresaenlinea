@@ -68,7 +68,6 @@
   opacity: 10%;
   width: max(min(27vw, 340px), 200px);
   height: 95%;
-  background-color: red;
   border-radius: 10px;
 }
 
