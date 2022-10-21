@@ -72,7 +72,7 @@ const ProfileSlider = ({ images }) => {
           <div className={s.profileModal}>
             <img
               className={s.icon}
-              src="/icons/closeIcon.png"
+              src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666317402/tuempresaenlinea/icons/closeIcon_aksvjy.png"
               onClick={() => closeModal()}
             />
             <a
