@@ -113,7 +113,7 @@ export default function Home() {
         <div className={s.title}> Diseño Web para cualquier dispositivo </div>
       </div>
       <LaptopViewer />
-      <div /* Description (Canvas) */ className={s.middle}>
+      <div /* Description (Canvas) */ className={s.delayedMiddle}>
         <div className={s.canvasDesc}>
           Páginas web que se ven bien tanto en dispositivos móbiles, como de
           escritorio
