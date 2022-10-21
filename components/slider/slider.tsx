@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Autoplay } from "swiper";
 import "swiper/css";
@@ -7,9 +7,9 @@ import { Modal } from "../modal/modal";
 import Link from "next/link";
 
 const ProfileSlider = ({ images }) => {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [modalKey, setKey] = React.useState(0);
-  const [oldKey, newKey] = React.useState(0);
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalKey, setKey] = useState(0);
+  const [oldKey, newKey] = useState(0);
 
   function openModal(id) {
     if (oldKey == id) {
@@ -18,6 +18,11 @@ const ProfileSlider = ({ images }) => {
     }
   }
 
+  function IfNotEqual(id) {
+    if (oldKey != id) {
+      setKey(id);
+    }
+  }
   function closeModal() {
     setIsOpen(false);
   }
@@ -41,7 +46,7 @@ const ProfileSlider = ({ images }) => {
       modules={[Mousewheel, Autoplay]}
       slideToClickedSlide={true}
       onSlideChangeTransitionEnd={(swiper) => {
-        newKey(swiper.realIndex);
+        newKey(swiper.realIndex), IfNotEqual(swiper.realIndex);
       }}
     >
       {images.map(({ id, src, nombre }) => (
