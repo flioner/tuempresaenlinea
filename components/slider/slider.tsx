@@ -10,13 +10,20 @@ const ProfileSlider = ({ images }) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [modalKey, setKey] = React.useState();
 
+  const [cont, setCont] = React.useState(1);
+
   function openModal(id) {
-    setKey(id);
-    setIsOpen(true);
+    if (modalIsOpen == false) {
+      setCont(cont + 1);
+    }
+    if (cont == 1) {
+      setKey(id);
+      setIsOpen(true);
+      setCont(0);
+    }
   }
 
-  function closeModal(id) {
-    setKey(id);
+  function closeModal() {
     setIsOpen(false);
   }
 
@@ -39,6 +46,16 @@ const ProfileSlider = ({ images }) => {
       modules={[Mousewheel, Autoplay]}
       slideToClickedSlide={true}
     >
+      {images.map(({ id, src, nombre }) => (
+        <SwiperSlide className={s.profileSlide} key={id}>
+          <img
+            onClick={() => openModal(id)}
+            className={s.imageCrop}
+            src={src}
+          />
+          <div className={s.text}> {nombre}</div>
+        </SwiperSlide>
+      ))}
       {images.map(
         ({
           id,
@@ -49,53 +66,41 @@ const ProfileSlider = ({ images }) => {
           urlUniversidad,
           socialUrl,
         }) => (
-          <SwiperSlide
-            onClick={() => toggleModal(id)}
-            className={s.profileSlide}
-            key={id}
+          <Modal
+            isOpen={
+              modalIsOpen &&
+              modalKey === id &&
+              (universidad != null || social != null)
+            }
+            setOpen={setIsOpen}
           >
-            <img
-              onClick={() => openModal(id)}
-              className={s.imageCrop}
-              src={src}
-            />
-            <div className={s.text}> {nombre}</div>
+            <div className={s.profileModal}>
+              <a
+                className={s.url}
+                href={urlUniversidad}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={universidad != null ? s.modalImg : s.hidden}
+                  src={universidad}
+                />
+              </a>
 
-            <Modal
-              isOpen={
-                modalIsOpen &&
-                modalKey === id &&
-                (universidad != null || social != null)
-              }
-              setOpen={setIsOpen}
-            >
-              <div className={s.profileModal}>
-                <a
-                  className={s.url}
-                  href={urlUniversidad}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className={universidad != null ? s.modalImg : s.hidden}
-                    src={universidad}
-                  />
-                </a>
-
-                <a
-                  className={s.url}
-                  href={socialUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className={social != null ? s.modalImg : s.hidden}
-                    src={social}
-                  />
-                </a>
-              </div>
-            </Modal>
-          </SwiperSlide>
+              <a
+                className={s.url}
+                href={socialUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className={social != null ? s.modalImg : s.hidden}
+                  src={social}
+                />
+              </a>
+            </div>
+            <div className={s.bgModal} onClick={() => closeModal()} />
+          </Modal>
         )
       )}
     </Swiper>

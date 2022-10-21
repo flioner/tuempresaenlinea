@@ -62,49 +62,51 @@ export default function Home() {
         <div className={s.title}> Nuestros Desarrolladores Web </div>
       </div>
 
-      <div className={s.crop}>
-        <ProfileSlider
-          images={[
-            {
-              id: 0,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298576/tuempresaenlinea/Devs/FabianLioner_Cropped_xd3pb3.jpg",
-              nombre: "Fabián",
-              universidad:
-                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
-              urlUniversidad:
-                "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
-              social:
-                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-              socialUrl: "https://www.linkedin.com/in/fabianlioner/",
-            },
-            {
-              id: 1,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298536/tuempresaenlinea/Devs/Gabriel_Caballero_hcxxay.jpg",
-              nombre: "Gabriel",
-              universidad:
-                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/McGill_mdsgym.jpg",
-              urlUniversidad: "https://www.mcgill.ca/",
-              social:
-                "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-              socialUrl: "https://www.linkedin.com/in/gabbrousset/",
-            },
-            {
-              id: 2,
-              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
-              nombre: "Dev 3",
-            },
-            {
-              id: 3,
-              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
-              nombre: "Dev 4",
-            },
-            {
-              id: 4,
-              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
-              nombre: "Dev 5",
-            },
-          ]}
-        />
+      <div className={s.middle}>
+        <div className={s.crop}>
+          <ProfileSlider
+            images={[
+              {
+                id: 0,
+                src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298576/tuempresaenlinea/Devs/FabianLioner_Cropped_xd3pb3.jpg",
+                nombre: "Fabián",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl: "https://www.linkedin.com/in/fabianlioner/",
+              },
+              {
+                id: 1,
+                src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298536/tuempresaenlinea/Devs/Gabriel_Caballero_hcxxay.jpg",
+                nombre: "Gabriel",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/McGill_mdsgym.jpg",
+                urlUniversidad: "https://www.mcgill.ca/",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl: "https://www.linkedin.com/in/gabbrousset/",
+              },
+              {
+                id: 2,
+                src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
+                nombre: "Dev 3",
+              },
+              {
+                id: 3,
+                src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
+                nombre: "Dev 4",
+              },
+              {
+                id: 4,
+                src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
+                nombre: "Dev 5",
+              },
+            ]}
+          />
+        </div>
       </div>
 
       <div /* TITLE */ className={s.middle}>
