@@ -13,6 +13,7 @@ const ProfileSlider = ({ images }) => {
 
   function openModal(id) {
     if (oldKey == id) {
+      setKey(id);
       setIsOpen(true);
     }
   }
