@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Autoplay } from "swiper";
 import "swiper/css";
@@ -70,6 +70,11 @@ const ProfileSlider = ({ images }) => {
           key={id}
         >
           <div className={s.profileModal}>
+            <img
+              className={s.icon}
+              src="/icons/closeIcon.png"
+              onClick={() => closeModal()}
+            />
             <a
               className={s.url}
               href={urlUniversidad}

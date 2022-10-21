@@ -69,6 +69,7 @@
   width: max(min(27vw, 340px), 200px);
   height: 95%;
   border-radius: 10px;
+  z-index: -1;
 }
 
 .modalImg {
@@ -91,6 +92,22 @@
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 17px;
+  margin: 8px;
+  opacity: 30%;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.3s;
 }
 /* Vertical Slider */
 
