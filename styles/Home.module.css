@@ -1,6 +1,7 @@
 /* Global */
 .container {
   position: relative;
+  min-width: 320px;
   max-width: 2100px;
   width: 100%;
 }
@@ -104,18 +105,15 @@
 }
 
 /* Sliders */
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
   .crop {
-    width: 65%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
     transition: 0.5s;
   }
-}
-
-@media (max-width: 1000px) {
   .canvasDesc {
     width: 90%;
     text-align: center;
@@ -126,6 +124,26 @@
     box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.9);
   }
 }
+@media (min-width: 500px) {
+  .crop {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .canvasDesc {
+    width: 90%;
+    text-align: center;
+    font-size: var(--M);
+    position: absolute;
+    top: -30px;
+    background-color: var(--white);
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.9);
+  }
+}
+
 @media (min-width: 1000px) {
   .crop {
     width: 55%;
