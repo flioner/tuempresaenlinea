@@ -42,8 +42,8 @@
   position: relative;
   height: auto;
   height: 100%;
-  max-height: max(min(13vw, 170px), 80px);
-  max-width: max(min(13vw, 170px), 80px);
+  max-height: max(min(13vw, 170px), 65px);
+  max-width: max(min(13vw, 170px), 65px);
   margin: 10px 20px;
   border-radius: 50%;
   cursor: pointer;
