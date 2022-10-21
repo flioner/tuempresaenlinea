@@ -10,18 +10,25 @@ const ProfileSlider = ({ images }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalKey, setKey] = useState(0);
   const [oldKey, newKey] = useState(0);
+  const [empty, isEmpty] = useState(false);
 
   function openModal(id) {
     if (oldKey == id) {
       setKey(id);
       setIsOpen(true);
+      console.log("open");
     }
   }
 
   function IfNotEqual(id) {
-    if (oldKey != id) {
+    if (oldKey != id && !empty) {
       setKey(id);
     }
+    isEmpty(true);
+  }
+
+  function IfNotEqualAndEmpty(universidad) {
+    isEmpty(universidad == null);
   }
   function closeModal() {
     setIsOpen(false);
@@ -83,6 +90,7 @@ const ProfileSlider = ({ images }) => {
             >
               <img
                 className={universidad != null ? s.modalImg : s.hidden}
+                onAnimationStartCapture={() => IfNotEqualAndEmpty(universidad)}
                 src={universidad}
               />
             </a>
@@ -94,6 +102,7 @@ const ProfileSlider = ({ images }) => {
               rel="noreferrer"
             >
               <img
+                onAnimationStartCapture={() => IfNotEqualAndEmpty(universidad)}
                 className={social != null ? s.modalImg : s.hidden}
                 src={social}
               />
