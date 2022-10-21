@@ -40,10 +40,8 @@ const ProfileSlider = ({ images }) => {
       mousewheel={true}
       modules={[Mousewheel, Autoplay]}
       slideToClickedSlide={true}
-      onSlideChange={(swiper) => {
-        setTimeout(() => {
-          newKey(swiper.realIndex);
-        }, 100);
+      onSlideChangeTransitionEnd={(swiper) => {
+        newKey(swiper.realIndex);
       }}
     >
       {images.map(({ id, src, nombre }) => (
