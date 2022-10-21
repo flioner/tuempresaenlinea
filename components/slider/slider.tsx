@@ -34,17 +34,16 @@ const ProfileSlider = ({ images }) => {
     setIsOpen(false);
   }
 
-  function toggleModal(id) {
-    setKey(id);
-    setIsOpen(!modalIsOpen);
-  }
-
   return (
     <Swiper
       loop={true}
+      onSlideChangeTransitionEnd={(swiper) => {
+        newKey(swiper.realIndex), IfNotEqual(swiper.realIndex);
+      }}
       autoplay={{
-        delay: modalIsOpen ? 200000 : 10000,
-        disableOnInteraction: true,
+        delay: 5000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
       }}
       slidesPerView={3}
       centeredSlides={true}
@@ -52,9 +51,6 @@ const ProfileSlider = ({ images }) => {
       mousewheel={true}
       modules={[Mousewheel, Autoplay]}
       slideToClickedSlide={true}
-      onSlideChangeTransitionEnd={(swiper) => {
-        newKey(swiper.realIndex), IfNotEqual(swiper.realIndex);
-      }}
     >
       {images.map(({ id, src, nombre }) => (
         <SwiperSlide className={s.profileSlide} key={id}>

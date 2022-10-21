@@ -35,21 +35,21 @@ export default function Home() {
           images={[
             {
               id: 0,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298728/tuempresaenlinea/Carousel/carousel_Portfolio_i6dwfg.jpg",
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322814/tuempresaenlinea/Carousel/Portfaolio_lhyjh9.jpg",
               titulo: "Portafolio",
               url: "/portafolio",
               desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
             {
               id: 1,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298822/tuempresaenlinea/Carousel/carousel_Ecommerce_hk3d4o.jpg",
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322996/tuempresaenlinea/Carousel/Showroom_d0vmrc.jpg",
               titulo: "E-Commerce",
               url: "/ecommerce",
               desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
             {
               id: 2,
-              src: "https://eddencei.sirv.com/TuEmpresaEnLinea/bgImg.jpg",
+              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322804/tuempresaenlinea/Carousel/Ecommerce_vbtvxz.webp",
               titulo: "Showroom",
               url: "/showroom",
               desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
