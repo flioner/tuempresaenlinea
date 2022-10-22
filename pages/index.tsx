@@ -124,7 +124,7 @@ export default function Home() {
           <div className={s.verticalCenter}>
             <div className={s.heroTitle}>Vercel + NextJS.</div>
             <div className={s.heroDesc}>
-              El éstandar de calidad en la industra, usado por:
+              El éstandar de calidad en la industria, usado por:
             </div>
             <ImageCollection
               tiny={true}

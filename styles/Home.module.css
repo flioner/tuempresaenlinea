@@ -134,6 +134,7 @@
     font-size: var(--M);
     position: absolute;
     top: -30px;
+    color: var(--darkgrey);
   }
 }
 @media (min-width: 500px) {
@@ -151,6 +152,7 @@
     font-size: var(--M);
     position: absolute;
     top: -35px;
+    color: var(--darkgrey);
   }
 }
 
@@ -168,6 +170,7 @@
     font-size: var(--M);
     position: absolute;
     top: -50px;
+    color: var(--darkgrey);
   }
 }
 @media (min-width: 1500px) {
@@ -184,6 +187,7 @@
     font-size: var(--M);
     position: absolute;
     top: -80px;
+    color: var(--darkgrey);
   }
 }
 
