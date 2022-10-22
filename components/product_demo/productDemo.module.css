@@ -69,7 +69,6 @@
   .canvasCont {
     width: 40%;
     height: 100%;
-    max-height: max(min(30vw, 500px), 250px);
     margin: max(min(2vw, 20px), 12px);
 
     background: var(--white);
@@ -84,7 +83,6 @@
   .canvasContLight {
     width: 40%;
     height: 100%;
-    max-height: max(min(30vw, 400px), 190px);
 
     background: var(--white);
     background-image: radial-gradient(var(--lightgrey) 1.2px, transparent 0);
@@ -288,7 +286,7 @@
 }
 
 .configBtn {
-  border: 2.9px solid var(--grey);
+  border: 2.7px solid var(--grey);
   border-radius: 35px;
 
   padding: 7px 15px;
@@ -302,12 +300,12 @@
   transition: 0.4s;
 }
 .configBtn:hover {
-  border: 2.9px solid var(--darkgrey);
+  border: 2.7px solid var(--darkgrey);
   cursor: pointer;
   transition: 0.4s;
 }
 .activeConfig {
-  border: 2.9px solid var(--black);
+  border: 2.7px solid var(--black);
   border-radius: 35px;
 
   padding: 7px 15px;

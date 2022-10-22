@@ -98,16 +98,16 @@ const ProductDemo = ({
           <div>Vista</div>
           <div className={s.separateCont}>
             <div
-              onClick={() => setView(true)}
-              className={view ? s.activeConfig : s.configBtn}
-            >
-              3D
-            </div>
-            <div
               onClick={() => setView(false)}
               className={!view ? s.activeConfig : s.configBtn}
             >
               2D
+            </div>
+            <div
+              onClick={() => setView(true)}
+              className={view ? s.activeConfig : s.configBtn}
+            >
+              3D
             </div>
           </div>
         </div>
