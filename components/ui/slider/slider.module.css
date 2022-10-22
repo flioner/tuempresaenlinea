@@ -38,7 +38,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .imageCrop {
     position: relative;
     height: auto;
@@ -50,7 +50,7 @@
     cursor: pointer;
   }
 }
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .imageCrop {
     position: relative;
     height: auto;
@@ -93,7 +93,7 @@
   height: 100%;
   min-height: 20px;
   min-width: 20px;
-  border-radius: 8px;
+  border-radius: max(min(0.7vw, 7px), 3px);
 }
 
 .hidden {
@@ -132,29 +132,27 @@
   max-height: max(min(35vw, 650px), 200px);
   background-color: var(--white);
 }
-
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .verticalSlide {
     width: 100%;
     height: 100%;
     display: flex;
     box-shadow: var(--extraglow);
   }
-
   .verticalImg {
-    width: 35%;
+    width: auto;
     object-fit: cover;
     margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px);
-    border-radius: 8px;
-    box-shadow: var(--shortglow);
+    border-radius: max(min(0.7vw, 7px), 3px);
+    box-shadow: var(--shorterglow);
   }
   .verticalTextCont {
-    width: 65%;
+    width: 100%;
     margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
       max(min(1vw, 20px), 10px) 0px;
     background-color: var(--almostwhite);
-    border-radius: 8px;
-    box-shadow: var(--shortglow);
+    border-radius: max(min(0.7vw, 7px), 3px);
+    box-shadow: var(--shorterglow);
     transition: 0.3s;
   }
   .verticalTitle {
@@ -172,7 +170,7 @@
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
   .verticalSlide {
     width: 100%;
     height: 100%;
@@ -184,8 +182,8 @@
   .verticalImg {
     height: 90%;
     margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px);
-    border-radius: 8px;
-    box-shadow: var(--shortglow);
+    border-radius: max(min(0.7vw, 7px), 3px);
+    box-shadow: var(--shorterglow);
   }
   .verticalTextCont {
     width: 100%;
@@ -193,8 +191,8 @@
     margin: max(min(1vw, 20px), 10px) max(min(1vw, 20px), 10px)
       max(min(1vw, 20px), 10px) 0px;
     background-color: var(--almostwhite);
-    border-radius: 8px;
-    box-shadow: var(--shortglow);
+    border-radius: max(min(0.7vw, 7px), 3px);
+    box-shadow: var(--shorterglow);
     transition: 0.3s;
   }
   .verticalTitle {
@@ -213,6 +211,13 @@
   }
 }
 
+@media (min-width: 1000px) {
+  .verticalCont {
+    width: 100%;
+    max-height: max(min(28vw, 650px), 200px);
+    background-color: var(--white);
+  }
+}
 .verticalTitle:hover {
   text-decoration: underline;
 }

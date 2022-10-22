@@ -1,18 +1,21 @@
 import Layout from "../components/layout/layout";
-import { ProfileSlider, VerticalSlider } from "../components/slider/slider";
+import { ProfileSlider, VerticalSlider } from "../components/ui/slider/slider";
 import s from "../styles/Home.module.css";
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { LaptopViewer } from "../components/threejs/canvas";
 import { VantaBG } from "../components/threejs/vanta";
 import { ObjViewer } from "../components/threejs/threejs";
-import { Modal } from "../components/modal/modal";
+import { Modal } from "../components/ui/modal/modal";
+import { ImageCollection } from "../components/ui/image_collection/image_collection";
+import { ImageHero } from "../components/ui/imgHero/imghero";
+
 export default function Home() {
   return (
     <Layout>
       <div /* TYPEWRITER */ className={s.landingContainer}>
         <div className={s.landingText}>
-          Empieza tu &nbsp;
+          Hacemos tu &nbsp;
           <div className={s.typewriter}>
             <Typewriter
               options={{
@@ -32,6 +35,7 @@ export default function Home() {
 
       <div /* VERTICAL SLIDER */ className={s.verticalGlow}>
         <VerticalSlider
+          scroll={true}
           images={[
             {
               id: 0,
@@ -62,7 +66,7 @@ export default function Home() {
         <div className={s.title}> Nuestros Desarrolladores Web </div>
       </div>
 
-      <div className={s.middle}>
+      <div className={s.middle} /* PROFILE SLIDER */>
         <div className={s.crop}>
           <ProfileSlider
             images={[
@@ -109,10 +113,47 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={s.imgHeroCont} /* IMAGE HERO */>
+        <ImageHero>
+          <div className={s.extraCont}>
+            <img
+              className={s.heroImg}
+              src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666421165/tuempresaenlinea/icons/VercelCompanies/Next_Vercel_wf2jsu.webp"
+            />
+          </div>
+          <div className={s.verticalCenter}>
+            <div className={s.heroTitle}>Vercel + NextJS.</div>
+            <div className={s.heroDesc}>
+              El éstandar de calidad en la industra, usado por:
+            </div>
+            <ImageCollection
+              tiny={true}
+              crop={true}
+              images={[
+                {
+                  src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666417929/tuempresaenlinea/icons/VercelCompanies/MetaLogo_mgocmy.png",
+                },
+                {
+                  src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666418992/tuempresaenlinea/icons/VercelCompanies/UberLogo_qgtf5z.png",
+                },
+                {
+                  src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666418983/tuempresaenlinea/icons/VercelCompanies/EbayLogo_c8bjxu.png",
+                },
+                {
+                  src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666421344/tuempresaenlinea/icons/VercelCompanies/AdobeLogo_g1eqaz.png",
+                },
+              ]}
+            />
+          </div>
+        </ImageHero>
+      </div>
+
       <div /* TITLE */ className={s.middle}>
         <div className={s.title}> Diseño Web para cualquier dispositivo </div>
       </div>
-      <LaptopViewer />
+      <div className={s.marginTop}>
+        <LaptopViewer />
+      </div>
       <div /* Description (Canvas) */ className={s.delayedMiddle}>
         <div className={s.canvasDesc}>
           Páginas web que se ven bien tanto en dispositivos móbiles, como de

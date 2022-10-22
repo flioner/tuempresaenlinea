@@ -113,7 +113,7 @@ const ProfileSlider = ({ images }) => {
 
 export { ProfileSlider };
 
-const VerticalSlider = ({ images }) => {
+const VerticalSlider = ({ images, scroll }) => {
   return (
     <Swiper
       className={s.verticalCont}
@@ -126,7 +126,7 @@ const VerticalSlider = ({ images }) => {
       slidesPerView={1.5}
       centeredSlides={true}
       spaceBetween={15}
-      mousewheel={true}
+      mousewheel={scroll}
       modules={[Mousewheel, Autoplay]}
     >
       {images.map(({ id, src, titulo, desc, url }) => (

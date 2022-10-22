@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import WAVES from 'vanta/dist/vanta.waves.min'
+import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import s from "./vanta.module.css";
 
@@ -13,11 +13,10 @@ const VantaBG = () => {
         WAVES({
           el: vantaRef.current,
           THREE: THREE,
-          color: 0xdfdfdf,
+          color: 0xededed,
           mouseControls: false,
           touchControls: false,
           gyroControls: false,
-         
         })
       );
     }
@@ -25,10 +24,7 @@ const VantaBG = () => {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-  return (
-    <div className={s.vanta} ref={vantaRef}>
-    </div>
-  );
+  return <div className={s.vanta} ref={vantaRef}></div>;
 };
 
 export { VantaBG };
