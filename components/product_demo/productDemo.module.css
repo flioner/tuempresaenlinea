@@ -1,4 +1,9 @@
 /* Containers */
+.mainCont {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .middle {
   display: flex;
   justify-content: center;
@@ -7,43 +12,55 @@
 }
 .flexCont {
   display: flex;
-  background-color: var(--lightgrey);
-
+  background-color: var(--lightergrey);
   width: 100%;
-  max-width: 1200px;
   height: auto;
   max-height: max(min(30vw, 450px), 250px);
   padding-bottom: max(min(5.5vw, 40px), 18px);
-  border-radius: 10px;
-  margin: max(min(2vw, 20px), 12px);
+  border-radius: max(min(1vw, 10px), 6px);
+  margin: max(min(2vw, 20px), 12px) 0px;
+  transition: 0.3s;
 }
 
 .flexContLight {
   display: flex;
   width: 100%;
-  max-width: 1200px;
   max-height: max(min(30vw, 400px), 200px);
   border-radius: 10px;
-  margin: max(min(2vw, 20px), 12px);
+  margin: max(min(2vw, 20px), 12px) 0px;
+  transition: 0.3s;
 }
 
 @media (max-width: 700px) {
   .canvasCont {
-    width: 35%;
+    width: 32%;
     height: 100%;
     background-color: var(--white);
     margin: max(min(2vw, 20px), 12px);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
+
+    background: var(--white);
+    background-image: radial-gradient(var(--lightgrey) 1.2px, transparent 0);
+    background-size: 35px 35px;
+    background-position: 0px 0px;
+
+    border-radius: max(min(1vw, 10px), 6px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.17) inset;
     transition: 0.3s;
   }
   .canvasContLight {
-    width: 35%;
+    width: 32%;
     height: 100%;
-    background-color: var(--grey);
-    margin: max(min(2vw, 20px), 12px);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
+
+    background: var(--white);
+    background-image: radial-gradient(var(--lightgrey) 1.1px, transparent 0);
+    background-size: 25px 25px;
+    background-position: 0px 0px;
+
+    margin: max(min(2vw, 20px), 12px) max(min(2vw, 20px), 12px)
+      max(min(2vw, 20px), 12px) 0px;
+    border-radius: max(min(1vw, 10px), 6px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) inset;
     transition: 0.3s;
   }
 }
@@ -53,22 +70,43 @@
     width: 40%;
     height: 100%;
     max-height: max(min(30vw, 500px), 250px);
-    background-color: var(--white);
     margin: max(min(2vw, 20px), 12px);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
+
+    background: var(--white);
+    background-image: radial-gradient(var(--lightgrey) 1.2px, transparent 0);
+    background-size: 35px 35px;
+    background-position: 0px 0px;
+
+    border-radius: max(min(1vw, 10px), 6px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.17) inset;
     transition: 0.3s;
   }
   .canvasContLight {
     width: 40%;
     height: 100%;
     max-height: max(min(30vw, 400px), 190px);
-    background-color: var(--grey);
-    margin: max(min(2vw, 20px), 12px);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
+
+    background: var(--white);
+    background-image: radial-gradient(var(--lightgrey) 1.2px, transparent 0);
+    background-size: 35px 35px;
+    background-position: 0px 0px;
+
+    margin: max(min(2vw, 20px), 12px) max(min(2vw, 20px), 12px)
+      max(min(2vw, 20px), 12px) 0px;
+    border-radius: max(min(1vw, 10px), 6px);
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) inset;
     transition: 0.3s;
   }
+}
+.textContLight {
+  width: 100%;
+  height: 100%;
+  margin: max(min(2vw, 20px), 12px) 0px max(min(2vw, 20px), 12px) 0px;
+  border-radius: max(min(1vw, 10px), 6px);
+  background-color: var(--lightestgrey);
+  padding: max(min(1vw, 20px), 7px) max(min(2vw, 20px), 15px);
+  transition: 0.3s;
 }
 
 .textCont {
@@ -76,9 +114,10 @@
   height: 100%;
   margin: max(min(2vw, 20px), 12px) max(min(2vw, 20px), 12px)
     max(min(2vw, 20px), 12px) 0px;
-  border-radius: 10px;
-  background-color: var(--lightergrey);
+  border-radius: max(min(1vw, 10px), 6px);
+  background-color: var(--lightestgrey);
   padding: max(min(1vw, 20px), 7px) max(min(2vw, 20px), 15px);
+  transition: 0.3s;
 }
 
 /* Text */
@@ -145,7 +184,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: max(min(1vw, 10px), 6px);
 }
 
 .imgCont {
@@ -153,7 +192,7 @@
   width: 60%;
   background-color: var(--white);
   margin: max(min(2vw, 20px), 12px);
-  border-radius: 10px;
+  border-radius: max(min(1vw, 10px), 6px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) inset;
   transition: 0.3s;
 }
@@ -178,7 +217,7 @@
   width: 100%;
   max-width: 1200px;
   max-height: max(min(30vw, 400px), 200px);
-  border-radius: 10px;
+  border-radius: max(min(1vw, 10px), 6px);
   margin: max(min(1vw, 20px), 7px) max(min(2vw, 20px), 12px);
   padding: max(min(2vw, 20px), 12px);
   animation: opacityIn 1s;
@@ -191,7 +230,7 @@
   width: 100%;
   max-width: 1160px;
   max-height: max(min(30vw, 400px), 200px);
-  border-radius: 10px;
+  border-radius: max(min(1vw, 10px), 6px);
   margin: max(min(1vw, 20px), 7px) max(min(4vw, 40px), 12px);
   padding: max(min(2vw, 20px), 12px);
   animation: opacityIn 1s;
@@ -229,4 +268,59 @@
   to {
     pacity: 100%;
   }
+}
+
+/* Config */
+.configCont {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 20px auto 0px auto;
+  font-weight: bold;
+  font-size: var(--M);
+  background-color: var(--lightestgrey);
+  padding: 20px 40px;
+  border-radius: max(min(0.5vw, 10px), 5px);
+}
+.separateCont {
+  display: flex;
+  margin: 10px 10px;
+}
+
+.configBtn {
+  border: 2.9px solid var(--grey);
+  border-radius: 35px;
+
+  padding: 7px 15px;
+  margin: 0px 10px;
+
+  background-color: var(--white);
+  color: var(--darkgrey);
+
+  font-weight: 400;
+  font-size: var(--XS);
+  transition: 0.4s;
+}
+.configBtn:hover {
+  border: 2.9px solid var(--darkgrey);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.activeConfig {
+  border: 2.9px solid var(--black);
+  border-radius: 35px;
+
+  padding: 7px 15px;
+  margin: 0px 10px;
+
+  background-color: var(--white);
+  color: var(--darkgrey);
+
+  font-weight: 400;
+  font-size: var(--XS);
+  transition: 0.4s;
+}
+.activeConfig:hover {
+  cursor: pointer;
+  transition: 0.4s;
 }

@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <ProductDemo
         lightmode={true}
-        is3D={true}
+        is3D={false}
         objPath={"waterbottle_tuempresaenlinea_compressed.glb"}
         imgPath={
           "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1665633593/img_jpfh4a.webp"
