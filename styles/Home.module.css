@@ -28,6 +28,14 @@
   animation-timing-function: ease-in-out;
 }
 
+.paddingMin {
+  padding: 20px 0px;
+  animation: fadeIn 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
 .padding {
   padding: 30px;
 }
@@ -232,6 +240,13 @@
   margin-top: max(min(5vw, 60px), 20px);
 }
 
+.imgHeroContNoTop {
+  animation: fadeIn 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
 .extraCont {
   display: flex;
   flex-wrap: wrap;
@@ -269,4 +284,18 @@
   @media (min-width: 1000px) {
     padding: max(min(3vw, 50px), 0px);
   }
+}
+
+.middleImg {
+  @media (max-width: 650px) {
+    width: 80%;
+  }
+  @media (min-width: 650px) {
+    width: 70%;
+  }
+  @media (min-width: 800px) {
+    width: 60%;
+  }
+  max-width: 800px;
+  margin: -5px auto;
 }

@@ -9,6 +9,7 @@ import { ObjViewer } from "../components/threejs/threejs";
 import { Modal } from "../components/ui/modal/modal";
 import { ImageCollection } from "../components/ui/image_collection/image_collection";
 import { ImageHero } from "../components/ui/imgHero/imghero";
+import DotWave from "../components/threejs/dots/dotwave";
 
 export default function Home() {
   return (
@@ -62,10 +63,9 @@ export default function Home() {
         />
       </div>
 
-      <div className={s.middle}>
+      <div className={s.middle} /* DEVS */>
         <div className={s.title}> Nuestros Desarrolladores Web </div>
       </div>
-
       <div className={s.middle} /* PROFILE SLIDER */>
         <div className={s.crop}>
           <ProfileSlider
@@ -148,18 +148,32 @@ export default function Home() {
         </ImageHero>
       </div>
 
-      <div /* TITLE */ className={s.middle}>
-        <div className={s.title}> Diseño Web para cualquier dispositivo </div>
-      </div>
-      <div className={s.marginTop}>
-        <LaptopViewer />
-      </div>
-      <div /* Description (Canvas) */ className={s.delayedMiddle}>
-        <div className={s.canvasDesc}>
-          Páginas web que se ven bien tanto en dispositivos móbiles, como de
-          escritorio
+      <div className={s.paddingMin} /* LAPTOP */>
+        <div /* TITLE */ className={s.middle}>
+          <div className={s.title}> Diseño Web para cualquier dispositivo </div>
+        </div>
+        <div className={s.marginTop}>
+          <LaptopViewer />
+        </div>
+        <div /* Description (Canvas) */ className={s.delayedMiddle}>
+          <div className={s.canvasDesc}>
+            Páginas web que se ven bien tanto en dispositivos móbiles, como de
+            escritorio
+          </div>
         </div>
       </div>
+
+      <div className={s.paddingMin}>
+        <DotWave />
+      </div>
+
+      <div /* TITLE */ className={s.middle}>
+        <div className={s.title}> Correo Personalizado </div>
+      </div>
+      <img
+        className={s.middleImg}
+        src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666483616/tuempresaenlinea/CorreoPersonalizado_e3qcnj.png"
+      />
     </Layout>
   );
 }

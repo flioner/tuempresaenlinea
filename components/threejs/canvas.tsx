@@ -26,7 +26,7 @@ const Laptop = (args) => {
     if (modelRef.current.rotation.x > 0) {
       modelRef.current.rotation.x -= 0.0005;
     }
-    if (modelRef.current.position.z > 0) {
+    if (modelRef.current.position.z > 0.0) {
       modelRef.current.position.z -= 0.0017;
     }
   });
@@ -64,7 +64,7 @@ const LaptopViewer = ({}) => {
         <Canvas
           camera={{ fov: 15, near: 0.1, far: 1000, z: 5 }}
           shadows
-          style={{ height: "40vw", width: "100%", maxHeight: "750px" }}
+          style={{ height: "36vw", width: "100%", maxHeight: "750px" }}
         >
           <Suspense fallback={<Loader />}>
             <ambientLight />
@@ -76,9 +76,10 @@ const LaptopViewer = ({}) => {
           </Suspense>
         </Canvas>
       </div>
-      <div onAnimationStart={() => Show()} className={!delayed ? s.bg3 : s.bg4}>
-        {" "}
-      </div>
+      <div
+        onAnimationStart={() => Show()}
+        className={!delayed ? s.bg3 : s.bg4}
+      ></div>
     </div>
   );
 };

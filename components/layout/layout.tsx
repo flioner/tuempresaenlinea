@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
-import { NavBar, Footer } from '../navigation/navbar';
+import { NavBar, Footer } from "../navigation/navbar";
 
 export const siteTitle = "Tu Empresa En Linea";
 
@@ -16,12 +16,13 @@ export default function Layout({ children }) {
         />
       </Head>
 
-      {<>
-      </>}
+      {<></>}
 
       <div className={s.contContainer}>
         <div className={s.container}>
-          <main><NavBar/> {children} <Footer /></main>
+          <main>
+            <NavBar /> {children} <Footer />
+          </main>
         </div>
       </div>
     </div>

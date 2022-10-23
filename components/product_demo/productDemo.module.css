@@ -152,6 +152,7 @@
 }
 .btn {
   font-size: var(--XS);
+  color: var(--darkgrey);
   margin: max(min(1vw, 20px), 7px) 0 0 0;
   padding: max(min(0.7vw, 11px), 6px);
   border-radius: 50px;
@@ -168,6 +169,7 @@
 
 .selectedBtn {
   font-size: var(--XS);
+  color: var(--black);
   margin: max(min(1vw, 20px), 7px) 0 0 0;
   padding: max(min(0.7vw, 11px), 6px);
   border: 2.7px solid #000;
@@ -312,7 +314,7 @@
   margin: 0px 10px;
 
   background-color: var(--white);
-  color: var(--darkgrey);
+  color: var(--black);
 
   font-weight: 400;
   font-size: var(--XS);

@@ -1,5 +1,5 @@
 import Layout from "../components/layout/layout";
-import { ProfileSlider, VerticalSlider } from "../components/ui/slider/slider";
+import Head from "next/head";
 import s from "../styles/Home.module.css";
 import React from "react";
 import { ProductDemo } from "../components/product_demo/productDemo";
@@ -7,6 +7,9 @@ import { ProductDemo } from "../components/product_demo/productDemo";
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>E-Commerce</title>
+      </Head>
       <ProductDemo
         lightmode={true}
         is3D={false}
