@@ -64,7 +64,7 @@ const LaptopViewer = ({}) => {
         <Canvas
           camera={{ fov: 15, near: 0.1, far: 1000, z: 5 }}
           shadows
-          style={{ height: "36vw", width: "100%", maxHeight: "750px" }}
+          style={{ height: "38vw", width: "100%", maxHeight: "750px" }}
         >
           <Suspense fallback={<Loader />}>
             <ambientLight />
