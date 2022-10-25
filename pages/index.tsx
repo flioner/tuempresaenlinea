@@ -1,7 +1,7 @@
 import Layout from "../components/layout/layout";
 import { ProfileSlider, VerticalSlider } from "../components/ui/slider/slider";
 import s from "../styles/Home.module.css";
-import React from "react";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import { LaptopViewer } from "../components/threejs/canvas";
 import { VantaBG } from "../components/threejs/vanta";
@@ -12,6 +12,7 @@ import { ImageHero } from "../components/ui/imgHero/imghero";
 import DotWave from "../components/threejs/dots/dotwave";
 
 export default function Home() {
+  const [visibleDot, setDots] = useState(false);
   return (
     <Layout>
       <div /* TYPEWRITER */ className={s.landingContainer}>
@@ -163,8 +164,24 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={s.paddingMin}>
-        <DotWave />
+      <div /* DOTS */
+        onMouseEnter={() => setDots(true)}
+        onMouseLeave={() => setDots(false)}
+        className={s.dotCont}
+      >
+        <div className={s.dotText}>
+          <div className={s.mainDot}>
+            <div className={s.innerDot}>Diseño&nbsp; </div>
+          </div>
+          <div className={visibleDot ? s.hiddenText : s.dot}>Digital</div>
+          <div className={!visibleDot ? s.hiddenText : s.dot}>
+            &nbsp;+ Marketing Digital
+          </div>
+        </div>
+
+        <div className={s.dotModule}>
+          <DotWave />
+        </div>
       </div>
 
       <div /* TITLE */ className={s.middle}>

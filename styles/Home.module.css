@@ -29,6 +29,7 @@
 }
 
 .paddingMin {
+  position: relative;
   padding: 20px 0px;
   animation: fadeIn 1s;
   animation-delay: 0.2s;
@@ -338,4 +339,87 @@
   }
   max-width: 800px;
   margin: -5px auto;
+}
+
+/* Dots Text */
+
+.dotCont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max(min(30vw, 550px), 100px);
+  animation: fadeIn 1.2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.dotText {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  font-size: var(--4XL);
+  font-weight: 700;
+  z-index: 99;
+}
+
+.dotModule {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  height: max(min(30vw, 550px), 100px);
+  width: 100%;
+}
+
+.mainDot {
+  position: relative;
+  width: 100%;
+}
+.innerDot {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+}
+.dot {
+  white-space: nowrap;
+  animation: dot 0.7s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.hiddenText {
+  white-space: nowrap;
+  object-fit: cover;
+  animation: dot2 0.7s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes dot {
+  0% {
+    width: 100%;
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    width: 0%;
+    opacity: 0%;
+  }
+}
+@keyframes dot2 {
+  0% {
+    width: 0%;
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    width: 100%;
+    opacity: 100%;
+  }
 }
