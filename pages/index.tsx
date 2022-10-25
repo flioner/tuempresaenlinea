@@ -173,8 +173,8 @@ export default function Home() {
           <div className={s.mainDot}>
             <div className={s.innerDot}>Diseño&nbsp; </div>
           </div>
-          <div className={visibleDot ? s.hiddenText : s.dot}>Digital</div>
-          <div className={!visibleDot ? s.hiddenText : s.dot}>
+          <div className={!visibleDot ? s.hiddenText : s.dot}>Digital</div>
+          <div className={visibleDot ? s.hiddenText : s.dot}>
             &nbsp;+ Marketing Digital
           </div>
         </div>
