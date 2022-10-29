@@ -101,7 +101,7 @@ export function ScrollControls({
     el.style[horizontal ? "overflowX" : "overflowY"] = "hidden";
     el.style[horizontal ? "overflowY" : "overflowX"] = "auto";
     el.style.top = "30px";
-    el.style.left = "0px";
+    el.style.left = "30px";
 
     fixed.style.position = "sticky";
     fixed.style.top = "0px";
