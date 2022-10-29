@@ -280,7 +280,7 @@
   font-size: var(--M);
   background-color: var(--lightestgrey);
   padding: 20px 40px;
-  border-radius: max(min(0.5vw, 10px), 5px);
+  border-radius: max(min(1vw, 10px), 6px);
 }
 .separateCont {
   display: flex;

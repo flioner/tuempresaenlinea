@@ -423,3 +423,27 @@
     opacity: 100%;
   }
 }
+
+/* Ecommerce */
+.ecommerceBanner {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--lightestgrey);
+  border-radius: max(min(1vw, 10px), 6px);
+}
+
+.ecommerceBannerText {
+  width: 100%;
+  color: var(--darkergrey);
+  font-size: var(--L);
+  font-weight: 700;
+  text-align: center;
+}
+
+.ecommerceBannerImg {
+  width: max(min(20vw, 300px), 130px);
+  margin: max(min(3vw, 60px), 30px) max(min(7vw, 160px), 30px);
+}

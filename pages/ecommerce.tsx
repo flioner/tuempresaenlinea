@@ -3,6 +3,7 @@ import Head from "next/head";
 import s from "../styles/Home.module.css";
 import React from "react";
 import { ProductDemo } from "../components/product_demo/productDemo";
+import Categories from "../components/categories/categories";
 
 export default function Home() {
   return (
@@ -22,6 +23,17 @@ export default function Home() {
         rotation={[0, -0.2, 0]}
         lightPosition={[0, -5, 7]}
       />
+      <Categories />
+
+      <div className={s.ecommerceBanner}>
+        <div className={s.ecommerceBannerText}>
+          Catalogo y checkout con Shopify
+        </div>
+        <img
+          className={s.ecommerceBannerImg}
+          src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666999145/tuempresaenlinea/icons/shopify_mpimiu.png"
+        />
+      </div>
     </Layout>
   );
 }

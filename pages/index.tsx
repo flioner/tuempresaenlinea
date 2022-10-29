@@ -166,7 +166,7 @@ export default function Home() {
 
       <div /* DOTS */
         onMouseEnter={() => setDots(true)}
-        onMouseLeave={() => setDots(false)}
+        // onMouseLeave={() => setDots(false)}
         className={s.dotCont}
       >
         <div className={s.dotText}>
