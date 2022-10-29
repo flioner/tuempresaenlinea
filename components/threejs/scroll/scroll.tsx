@@ -10,14 +10,7 @@ function Image(props) {
   const ref = useRef();
   const group = useRef();
   const data = useScroll();
-  useFrame((state, delta) => {
-    group.current.position.z = THREE.MathUtils.damp(
-      group.current.position.z,
-      Math.max(0, data.delta * 50),
-      4,
-      delta
-    );
-  });
+
   return (
     <group ref={group}>
       <ImageImpl ref={ref} {...props} />
@@ -85,7 +78,7 @@ function Pages() {
   );
 }
 
-export default function ScrollImages() {
+const ScrollImages = () => {
   return (
     <Canvas
       style={{ height: "50vw", maxHeight: "1050px" }}
@@ -102,4 +95,6 @@ export default function ScrollImages() {
       </Suspense>
     </Canvas>
   );
-}
+};
+
+export { ScrollImages };

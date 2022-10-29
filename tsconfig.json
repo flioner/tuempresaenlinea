@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -22,9 +18,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "components/threejs/vanta.jsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "components/threejs/vanta.jsx",
+    "components/threejs/scroll/scroll_controls.js"
+  ],
+  "exclude": ["node_modules"]
 }
