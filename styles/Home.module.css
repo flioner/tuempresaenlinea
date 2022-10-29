@@ -447,3 +447,9 @@
   width: max(min(20vw, 300px), 130px);
   margin: max(min(3vw, 60px), 30px) max(min(7vw, 160px), 30px);
 }
+.scrollCont {
+  width: 100%;
+  position: relative;
+  overflow-y: hidden !important;
+  overscroll-behavior: contain !important;
+}

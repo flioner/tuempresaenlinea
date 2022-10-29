@@ -81,7 +81,7 @@ function Pages() {
 const ScrollImages = () => {
   return (
     <Canvas
-      style={{ height: "50vw", maxHeight: "1050px" }}
+      style={{ height: "50vw", maxHeight: "1050px", width: "100%" }}
       gl={{ antialias: false }}
       dpr={[1, 1.5]}
     >

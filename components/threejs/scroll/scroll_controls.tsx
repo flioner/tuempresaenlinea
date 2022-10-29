@@ -97,9 +97,10 @@ export function ScrollControls({
     el.style.position = "absolute";
     el.style.width = "100%";
     el.style.height = "100%";
-    el.style[horizontal ? "overflowX" : "overflowY"] = "auto";
-    el.style[horizontal ? "overflowY" : "overflowX"] = "hidden";
-    el.style.top = "0px";
+
+    el.style[horizontal ? "overflowX" : "overflowY"] = "hidden";
+    el.style[horizontal ? "overflowY" : "overflowX"] = "auto";
+    el.style.top = "30px";
     el.style.left = "0px";
 
     fixed.style.position = "sticky";

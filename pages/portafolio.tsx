@@ -7,10 +7,13 @@ import { ScrollImages } from "../components/threejs/scroll/scroll";
 export default function Home() {
   return (
     <Layout>
-      <Head>
-        <title>Portafolio</title>
-      </Head>
-      <ScrollImages />
+      <div className={s.scrollCont}>
+        <Head>
+          <title>Portafolio</title>
+        </Head>
+
+        <ScrollImages />
+      </div>
     </Layout>
   );
 }
