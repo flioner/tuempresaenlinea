@@ -168,6 +168,7 @@
     font-size: var(--EXS);
     margin: max(min(1vw, 30px), 0px) max(min(4vw, 80px), 25px);
     color: var(--darkgrey);
+    line-height: 110%;
   }
 }
 
@@ -209,6 +210,7 @@
     font-size: var(--EXS);
     margin: max(min(1vw, 30px), 0px) max(min(4vw, 80px), 25px);
     color: var(--darkgrey);
+    line-height: auto;
   }
 }
 
