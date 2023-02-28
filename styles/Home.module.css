@@ -13,6 +13,7 @@
   justify-content: center;
   align-self: center;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 .middle {
