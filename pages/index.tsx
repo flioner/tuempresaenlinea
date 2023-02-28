@@ -46,21 +46,21 @@ export default function Home() {
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322814/tuempresaenlinea/Carousel/Portfaolio_lhyjh9.jpg",
               titulo: "Portafolio",
               url: "https://fabianlioner.com",
-              desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
+              desc: "Un portafolio digital te permite mostrar tu trabajo de manera accesible, organizada y actualizada en cualquier momento y lugar.",
             },
             {
               id: 1,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322996/tuempresaenlinea/Carousel/Showroom_d0vmrc.jpg",
               titulo: "E-Commerce",
               url: "https://commerce-delta-flame-60.vercel.app/",
-              desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
+              desc: "Ofrecemos una experiencia de compra fácil, segura y confiable para tus clientes así como una estrategia sólida de marketing digital.",
             },
             {
               id: 2,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322804/tuempresaenlinea/Carousel/Ecommerce_vbtvxz.webp",
-              titulo: "Showroom",
+              titulo: "Contacto",
               url: "https://tuempresaenlinea.com.mx",
-              desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
+              desc: "Descubre cómo podemos ayudarte a satisfacer tus necesidades y objetivos, ¡y contáctanos para obtener más información!",
             },
           ]}
         />

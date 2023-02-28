@@ -16,7 +16,6 @@
   width: 100%;
   height: auto;
   max-height: max(min(30vw, 450px), 250px);
-  margin-top: max(min(5.5vw, 40px), 18px);
   padding-bottom: max(min(5.5vw, 40px), 18px);
   border-radius: max(min(1vw, 10px), 6px);
   margin: max(min(5.5vw, 40px), 18px), max(min(2vw, 20px), 12px) 0px,
