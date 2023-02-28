@@ -135,7 +135,7 @@ const VerticalSlider = ({ images, scroll }) => {
             <img className={s.verticalImg} src={src} />
             <div className={s.verticalTextCont}>
               <div className={s.verticalCenter}>
-                <a href={url}>
+                <a href={url} target="_blank">
                   <div className={s.verticalTitle}>{titulo}</div>
                 </a>
                 <div className={s.verticalDesc}>{desc}</div>

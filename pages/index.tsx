@@ -10,6 +10,8 @@ import { Modal } from "../components/ui/modal/modal";
 import { ImageCollection } from "../components/ui/image_collection/image_collection";
 import { ImageHero } from "../components/ui/imgHero/imghero";
 import DotWave from "../components/threejs/dots/dotwave";
+import { ProductDemo } from "../components/product_demo/productDemo";
+import Categories from "../components/categories/categories";
 
 export default function Home() {
   const [visibleDot, setDots] = useState(false);
@@ -43,21 +45,21 @@ export default function Home() {
               id: 0,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322814/tuempresaenlinea/Carousel/Portfaolio_lhyjh9.jpg",
               titulo: "Portafolio",
-              url: "/portafolio",
+              url: "https://fabianlioner.com",
               desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
             {
               id: 1,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322996/tuempresaenlinea/Carousel/Showroom_d0vmrc.jpg",
               titulo: "E-Commerce",
-              url: "/ecommerce",
+              url: "https://commerce-delta-flame-60.vercel.app/",
               desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
             {
               id: 2,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322804/tuempresaenlinea/Carousel/Ecommerce_vbtvxz.webp",
               titulo: "Showroom",
-              url: "/showroom",
+              url: "https://tuempresaenlinea.com.mx",
               desc: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies luctus, nunc nisl aliquam nisl",
             },
           ]}
@@ -182,6 +184,30 @@ export default function Home() {
         <div className={s.dotModule}>
           <DotWave />
         </div>
+      </div>
+
+      <ProductDemo
+        lightmode={true}
+        is3D={false}
+        objPath={"waterbottle_tuempresaenlinea_compressed.glb"}
+        imgPath={
+          "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1665633593/img_jpfh4a.webp"
+        }
+        scale={2.8}
+        position={[0, -0.05, 0]}
+        rotation={[0, -0.2, 0]}
+        lightPosition={[0, -5, 7]}
+      />
+      <Categories />
+
+      <div className={s.ecommerceBanner}>
+        <div className={s.ecommerceBannerText}>
+          Catalogo y checkout con Shopify
+        </div>
+        <img
+          className={s.ecommerceBannerImg}
+          src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666999145/tuempresaenlinea/icons/shopify_mpimiu.png"
+        />
       </div>
 
       <div /* TITLE */ className={s.middle}>
