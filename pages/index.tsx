@@ -98,18 +98,42 @@ export default function Home() {
               },
               {
                 id: 2,
-                src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
-                nombre: "Dev 3",
+                src: "https://avatars.githubusercontent.com/u/105229933?v=4",
+                nombre: "Armando",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl:
+                  "https://www.linkedin.com/in/armando-terrazas-gomez/",
               },
               {
                 id: 3,
-                src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
-                nombre: "Dev 4",
+                src: "https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677594337/Pfps/cubo_m2qsvt.jpg",
+                nombre: "Daniel",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl:
+                  "https://www.linkedin.com/in/juan-daniel-mu%C3%B1oz-due%C3%B1as-892a72220/",
               },
               {
                 id: 4,
-                src: "https://eddencei.sirv.com/TuEmpresaEnLinea/pfp.webp",
-                nombre: "Dev 5",
+                src: "https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677594030/Pfps/curi_lapvee.jpg",
+                nombre: "Diego",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl:
+                  "https://www.linkedin.com/in/diego-curiel-castellanos-b5b125226/",
               },
             ]}
           />
