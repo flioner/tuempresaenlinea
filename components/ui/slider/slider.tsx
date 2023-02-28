@@ -64,6 +64,7 @@ const ProfileSlider = ({ images }) => {
       ))}
       {images.map(({ id, universidad, social, urlUniversidad, socialUrl }) => (
         <Modal
+          float={false}
           isOpen={
             modalIsOpen &&
             modalKey === id &&

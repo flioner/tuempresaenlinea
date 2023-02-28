@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from "./modal.module.css";
 
-const Modal = ({ isOpen, setOpen, children }) => {
+const Modal = ({ isOpen, setOpen, float, children }) => {
   function openModal() {
     setOpen(true);
   }
@@ -12,7 +12,9 @@ const Modal = ({ isOpen, setOpen, children }) => {
 
   return (
     <div className={s.fitScreen4}>
-      <div className={isOpen ? s.modal : s.modal2}> {children}</div>
+      <div className={isOpen ? (float ? s.modalFloat : s.modal) : s.modal2}>
+        {children}
+      </div>
     </div>
   );
 };

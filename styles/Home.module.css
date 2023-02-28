@@ -454,3 +454,19 @@
   overflow-y: hidden !important;
   overscroll-behavior: contain !important;
 }
+
+/* Contact */
+.contactButtCont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.contactButton {
+  width: fit-content;
+  color: var(--white);
+  background-color: var(--black);
+  font-weight: 600;
+  padding: 15px 20px;
+  border-radius: 15px;
+}

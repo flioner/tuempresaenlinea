@@ -12,6 +12,7 @@ import { ImageHero } from "../components/ui/imgHero/imghero";
 import DotWave from "../components/threejs/dots/dotwave";
 import { ProductDemo } from "../components/product_demo/productDemo";
 import Categories from "../components/categories/categories";
+import { Contact } from "../components/ui/contact/contact";
 
 export default function Home() {
   const [visibleDot, setDots] = useState(false);
@@ -241,6 +242,12 @@ export default function Home() {
         className={s.middleImg}
         src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666483616/tuempresaenlinea/CorreoPersonalizado_e3qcnj.png"
       />
+
+      <Contact>
+        <div className={s.contactButtCont}>
+          <div className={s.contactButton}>¡Contáctanos!</div>
+        </div>
+      </Contact>
     </Layout>
   );
 }
