@@ -13,6 +13,7 @@ export default function Layout({ children }) {
         <link
           rel="icon"
           href="https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677685387/Icons/teel_v5vp78.ico"
+          alt-text=""
         />
       </Head>
 

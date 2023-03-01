@@ -16,6 +16,7 @@ import { Contact } from "../components/ui/contact/contact";
 
 export default function Home() {
   const [visibleDot, setDots] = useState(false);
+
   return (
     <Layout>
       <div /* TYPEWRITER */ className={s.landingContainer}>
