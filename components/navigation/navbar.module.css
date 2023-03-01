@@ -4,7 +4,34 @@
   background-color: #fff;
   padding: 20px;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 10px 10px -10px #e8e8e8;
+  font-size: var(--S);
+}
+
+.combo {
+  display: flex;
+  align-items: center;
+}
+
+.mainTitle {
+  font-weight: 600;
+}
+
+.contacto {
+  color: var(--darkgrey);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contacto:hover {
+  color: var(--darkestgrey);
+  transition: 0.3s;
+}
+
+.icon {
+  height: max(min(2.5vw, 42px), 30px);
+  margin-right: max(min(2vw, 15px), 5px);
 }
 
 .footerSpacer {
@@ -17,4 +44,9 @@
   width: 100%;
   bottom: -0px;
   height: max(min(8vw, 80px), 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mediumgrey);
+  font-size: var(--S);
 }
