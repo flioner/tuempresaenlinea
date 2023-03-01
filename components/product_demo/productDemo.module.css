@@ -85,8 +85,8 @@
     display: flex;
     width: 100%;
     max-height: max(min(30vw, 400px), 200px);
+    margin-bottom: max(min(2vw, 20px), 12px);
     border-radius: 10px;
-    margin: max(min(2vw, 20px), 12px) 0px;
     transition: 0.3s;
   }
   .canvasCont {
