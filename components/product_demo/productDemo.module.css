@@ -10,29 +10,31 @@
   animation: onLoad 1s;
   animation-delay: 10s;
 }
-.flexCont {
-  display: flex;
-  background-color: var(--lightergrey);
-  width: 100%;
-  height: auto;
-  max-height: max(min(30vw, 450px), 250px);
-  padding-bottom: max(min(5.5vw, 40px), 18px);
-  border-radius: max(min(1vw, 10px), 6px);
-  margin: max(min(5.5vw, 40px), 18px), max(min(2vw, 20px), 12px) 0px,
-    max(min(2vw, 20px), 12px) 0px, max(min(2vw, 20px), 12px) 0px;
-  transition: 0.3s;
-}
-
-.flexContLight {
-  display: flex;
-  width: 100%;
-  max-height: max(min(30vw, 400px), 200px);
-  border-radius: 10px;
-  margin: max(min(2vw, 20px), 12px) 0px;
-  transition: 0.3s;
-}
 
 @media (max-width: 700px) {
+  .flexCont {
+    display: flex;
+    background-color: var(--lightergrey);
+    width: 100%;
+    height: auto;
+    max-height: max(min(30vw, 450px), 250px);
+    margin-top: 30px;
+    padding-bottom: max(min(5.5vw, 40px), 18px);
+    border-radius: max(min(1vw, 10px), 6px);
+    margin: max(min(5.5vw, 40px), 18px), max(min(2vw, 20px), 12px) 0px,
+      max(min(2vw, 20px), 12px) 0px, max(min(2vw, 20px), 12px) 0px;
+    transition: 0.3s;
+  }
+
+  .flexContLight {
+    display: flex;
+    width: 100%;
+    max-height: max(min(30vw, 400px), 200px);
+    border-radius: 10px;
+    margin-top: 20px !important;
+    margin: max(min(2vw, 20px), 12px) 0px;
+    transition: 0.3s;
+  }
   .canvasCont {
     width: 32%;
     height: 100%;
@@ -57,7 +59,7 @@
     background-size: 25px 25px;
     background-position: 0px 0px;
 
-    margin: max(min(2vw, 20px), 12px) max(min(2vw, 20px), 12px)
+    margin: max(min(2vw, 30px), 12px) max(min(2vw, 20px), 12px)
       max(min(2vw, 20px), 12px) 0px;
     border-radius: max(min(1vw, 10px), 6px);
 
@@ -67,6 +69,26 @@
 }
 
 @media (min-width: 700px) {
+  .flexCont {
+    display: flex;
+    background-color: var(--lightergrey);
+    width: 100%;
+    height: auto;
+    max-height: max(min(30vw, 450px), 250px);
+    padding-bottom: max(min(5.5vw, 40px), 18px);
+    border-radius: max(min(1vw, 10px), 6px);
+    margin: max(min(5.5vw, 40px), 18px), max(min(2vw, 20px), 12px) 0px,
+      max(min(2vw, 20px), 12px) 0px, max(min(2vw, 20px), 12px) 0px;
+    transition: 0.3s;
+  }
+  .flexContLight {
+    display: flex;
+    width: 100%;
+    max-height: max(min(30vw, 400px), 200px);
+    border-radius: 10px;
+    margin: max(min(2vw, 20px), 12px) 0px;
+    transition: 0.3s;
+  }
   .canvasCont {
     width: 40%;
     height: 100%;
@@ -166,6 +188,7 @@
 .btn:hover {
   border: 2px solid #888;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .selectedBtn {
@@ -245,6 +268,7 @@
   padding: max(min(0.5vw, 10px), 3px) 0 0 max(min(0.8vw, 12px), 5px);
   font-size: max(min(1.4vw, 1.3rem), 0.7rem);
   font-weight: bold;
+  cursor: pointer;
 }
 
 .warningButton:hover {
@@ -301,6 +325,7 @@
   font-weight: 400;
   font-size: var(--XS);
   transition: 0.4s;
+  cursor: pointer;
 }
 .configBtn:hover {
   border: 2.7px solid var(--darkgrey);
@@ -320,8 +345,5 @@
   font-weight: 400;
   font-size: var(--XS);
   transition: 0.4s;
-}
-.activeConfig:hover {
   cursor: pointer;
-  transition: 0.4s;
 }

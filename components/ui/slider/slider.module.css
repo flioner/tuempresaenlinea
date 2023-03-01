@@ -132,7 +132,91 @@
   max-height: max(min(40vw, 650px), 200px);
   background-color: var(--white);
 }
-@media (max-width: 500px) {
+
+@media (min-width: 500px) {
+  .imageCrop {
+    position: relative;
+    height: auto;
+    height: 100%;
+    max-height: max(min(13vw, 170px), 65px);
+    max-width: max(min(13vw, 170px), 65px);
+    margin: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.profileModal {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: max(min(27vw, 340px), 200px);
+  height: 95%;
+  background-color: var(--white);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.bgModal {
+  position: absolute;
+  padding: 10000px;
+  opacity: 10%;
+  width: max(min(27vw, 340px), 200px);
+  height: 95%;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.modalImg {
+  animation: onLoad 1s;
+  position: relative;
+  width: auto;
+  height: 100%;
+  min-height: 20px;
+  min-width: 20px;
+  border-radius: max(min(0.7vw, 7px), 3px);
+}
+
+.hidden {
+  display: block;
+  animation: onLoad 1s;
+}
+
+.url {
+  height: 60%;
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 17px;
+  margin: 8px;
+  opacity: 30%;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  opacity: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Vertical Slider */
+
+.verticalCont {
+  width: 100%;
+  max-height: max(min(40vw, 650px), 200px);
+  background-color: var(--white);
+}
+
+@media (max-width: 400px) {
   .verticalSlide {
     width: 100%;
     height: 100%;
@@ -156,6 +240,23 @@
     box-shadow: var(--shorterglow);
     transition: 0.3s;
   }
+  .verticalTitle {
+    font-size: var(--ES);
+    font-weight: bold;
+    margin: 0px 10px !important;
+    color: var(--darkgrey);
+    text-decoration: none;
+  }
+  .verticalDesc {
+    text-align: justify;
+    font-size: var(--EXXSM) !important;
+    color: var(--darkgrey);
+    line-height: 110%;
+    margin: 0px 10px !important;
+  }
+}
+
+@media (max-width: 500px) {
   .verticalTitle {
     font-size: var(--ES);
     font-weight: bold;

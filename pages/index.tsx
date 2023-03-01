@@ -60,7 +60,7 @@ export default function Home() {
               id: 2,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322804/tuempresaenlinea/Carousel/Ecommerce_vbtvxz.webp",
               titulo: "Contacto",
-              url: "https://tuempresaenlinea.com.mx",
+              url: "/contacto",
               desc: "Descubre cómo podemos ayudarte a satisfacer tus necesidades y objetivos, ¡y contáctanos para obtener más información!",
             },
           ]}

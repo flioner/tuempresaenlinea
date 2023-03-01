@@ -467,6 +467,8 @@
   color: var(--white);
   background-color: var(--black);
   font-weight: 600;
-  padding: 15px 20px;
+  padding: max(min(2vw, 30px), 10px) max(min(1.5vw, 20px), 12px);
   border-radius: 15px;
+  font-size: var(--S);
+  cursor: pointer;
 }
