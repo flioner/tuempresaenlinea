@@ -25,7 +25,7 @@ const NavBar = ({}) => {
   };
 
   return (
-    <div className={s.navContainer}>
+    <div className={pathname == "/" ? s.navContainer : s.navMainContainer}>
       <div className={s.combo} onClick={() => routeTo("/")}>
         <img
           className={s.icon}
