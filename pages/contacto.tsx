@@ -25,7 +25,7 @@ export default function Home() {
         <div className={s.contactForm}>
           <form className={s.contactCont} onSubmit={handleSubmit}>
             <label className={s.email} htmlFor="email">
-              Email Address
+              Correo Electrónico
             </label>
             <div className={s.break} />
             <input
@@ -41,7 +41,7 @@ export default function Home() {
             />
             <div className={s.break} />
             <label className={s.email} htmlFor="message">
-              Message
+              Mensaje
             </label>
             <div className={s.break} />
             <textarea className={s.messageBox} id="message" name="message" />
