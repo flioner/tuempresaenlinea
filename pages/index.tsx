@@ -47,14 +47,14 @@ export default function Home() {
               id: 0,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322814/tuempresaenlinea/Carousel/Portfaolio_lhyjh9.jpg",
               titulo: "Portafolio",
-              url: "https://fabianlioner.com",
+              url: "https://photo.fabianlioner.com",
               desc: "Un portafolio digital te permite mostrar tu trabajo de manera accesible, organizada y actualizada en cualquier momento y lugar.",
             },
             {
               id: 1,
               src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322996/tuempresaenlinea/Carousel/Showroom_d0vmrc.jpg",
               titulo: "E-Commerce",
-              url: "https://commerce-delta-flame-60.vercel.app/",
+              url: "https://novopc.mx",
               desc: "Ofrecemos una experiencia de compra fácil, segura y confiable para tus clientes así como una estrategia sólida de marketing digital.",
             },
             {
