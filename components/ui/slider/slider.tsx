@@ -153,16 +153,6 @@ const VerticalSlider = ({ images, scroll }) => {
 export { VerticalSlider };
 
 const HorizontalSlider = ({ images, scroll }) => {
-  const { pathname } = useRouter();
-  const currPath = useRouter();
-
-  const routeTo = (url) => {
-    if (url.includes("http")) {
-      window.open(url, "_blank");
-    } else {
-      currPath.push(url);
-    }
-  };
   return (
     <Swiper
       direction={"horizontal"}
@@ -179,9 +169,9 @@ const HorizontalSlider = ({ images, scroll }) => {
       {images.map(({ id, src, nombre, desc, url }) => (
         <SwiperSlide className={s.hSlide} key={id}>
           <div className={s.hCont}>
-            <div className={s.hTxt} onClick={() => routeTo(url)}>
+            <a className={s.hTxt} href={url}>
               {nombre}
-            </div>
+            </a>
 
             <div className={s.hsTxt}> {desc}</div>
             <div className={s.hgrad} />
