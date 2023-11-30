@@ -46,7 +46,7 @@ export default function Home() {
       {/* SLIDER*/}
       <div className={s.defaultCont}>
         <HorizontalSlider
-          scroll={true}
+          scroll={false}
           images={[
             {
               src: "/Images/photo.jpg",

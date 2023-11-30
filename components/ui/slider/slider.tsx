@@ -180,7 +180,6 @@ const HorizontalSlider = ({ images, scroll }) => {
         <SwiperSlide className={s.hSlide} key={id}>
           <div className={s.hCont}>
             <div className={s.hTxt} onClick={() => routeTo(url)}>
-              {" "}
               {nombre}
             </div>
 
