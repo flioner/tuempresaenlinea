@@ -28,9 +28,36 @@ const NavBar = ({}) => {
     if (pathname == url) {
       scrollToTop();
     } else {
-      currPath.push(url);
+      if (url.includes("http")) {
+        window.open(url, "_blank");
+      } else {
+        currPath.push(url);
+      }
     }
   };
+
+  const navOptions = [
+    {
+      txt: "Proyectos",
+      url: "/",
+    },
+    {
+      txt: "Experiencia",
+      url: "/",
+    },
+    {
+      txt: "Acerca de",
+      url: "/",
+    },
+    {
+      txt: "Github",
+      url: "/",
+    },
+    {
+      txt: "LinkedIn",
+      url: "https://www.linkedin.com/in/fabianlioner/",
+    },
+  ];
 
   return (
     <>
@@ -44,11 +71,11 @@ const NavBar = ({}) => {
         </div>
 
         <div className={s.navBody}>
-          <div className={s.navTxt}>Proyectos</div>
-          <div className={s.navTxt}>Experiencia</div>
-          <div className={s.navTxt}>Acerca de mi</div>
-          <div className={s.navTxt}>Github</div>
-          <div className={s.navTxt}>LinkedIn</div>
+          {navOptions.map(({ txt, url }, index) => (
+            <div onClick={() => routeTo(url)} className={s.navTxt} key={index}>
+              {txt}
+            </div>
+          ))}
         </div>
 
         <Contact>
@@ -59,11 +86,15 @@ const NavBar = ({}) => {
         <>
           <div className={s.modalBg} onClick={closeModal} />
           <div className={s.modalBody}>
-            <div className={s.modalTxt}>Proyectos</div>
-            <div className={s.modalTxt}>Experiencia</div>
-            <div className={s.modalTxt}>Acerca de mi</div>
-            <div className={s.modalTxt}>Github</div>
-            <div className={s.modalTxt}>LinkedIn</div>
+            {navOptions.map(({ txt, url }, index) => (
+              <div
+                onClick={() => routeTo(url)}
+                className={s.modalTxt}
+                key={index}
+              >
+                {txt}
+              </div>
+            ))}
           </div>
         </>
       </Modal>

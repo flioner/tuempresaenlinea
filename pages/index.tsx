@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <Layout>
       <div /* TYPEWRITER */ className={s.titleCont}>
-        <div className={s.mainTitle}> Fabián Lióner</div>
+        <div className={s.mainTitle}> Fabian Lioner</div>
 
         <div className={s.fLanding}>
           <Typewriter
@@ -139,31 +139,6 @@ export default function Home() {
         <div className={s.dotModule}>
           <DotWave />
         </div>
-      </div>
-
-      <ProductDemo
-        lightmode={true}
-        is3D={false}
-        objPath={"waterbottle_tuempresaenlinea_compressed.glb"}
-        imgPath={
-          "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1665633593/img_jpfh4a.webp"
-        }
-        scale={2.8}
-        position={[0, -0.05, 0]}
-        rotation={[0, -0.2, 0]}
-        lightPosition={[0, -5, 7]}
-      />
-      <Categories />
-
-      {/*Catalogo y Checkout con Shopify */}
-      <div className={s.ecommerceBanner}>
-        <div className={s.ecommerceBannerText}>
-          Catalogo y checkout con Shopify
-        </div>
-        <img
-          className={s.ecommerceBannerImg}
-          src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666999145/tuempresaenlinea/icons/shopify_mpimiu.png"
-        />
       </div>
     </Layout>
   );
@@ -311,6 +286,33 @@ export default function Home() {
           ]}
         />
       </div>
+*/
+
+/* 
+      <ProductDemo
+        lightmode={true}
+        is3D={false}
+        objPath={"waterbottle_tuempresaenlinea_compressed.glb"}
+        imgPath={
+          "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1665633593/img_jpfh4a.webp"
+        }
+        scale={2.8}
+        position={[0, -0.05, 0]}
+        rotation={[0, -0.2, 0]}
+        lightPosition={[0, -5, 7]}
+      />
+      <Categories />
+
+   
+      <div className={s.ecommerceBanner}>
+        <div className={s.ecommerceBannerText}>
+          Catalogo y checkout con Shopify
+        </div>
+        <img
+          className={s.ecommerceBannerImg}
+          src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666999145/tuempresaenlinea/icons/shopify_mpimiu.png"
+        />
+      </div> 
 */
 
 /*       <Contact>
