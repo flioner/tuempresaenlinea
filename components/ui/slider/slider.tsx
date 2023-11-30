@@ -150,3 +150,33 @@ const VerticalSlider = ({ images, scroll }) => {
 };
 
 export { VerticalSlider };
+
+const HorizontalSlider = ({ images, scroll }) => {
+  return (
+    <Swiper
+      direction={"horizontal"}
+      loop={true}
+      autoplay={{
+        delay: 10000,
+        disableOnInteraction: false,
+      }}
+      slidesPerView={"auto"}
+      centeredSlides={true}
+      mousewheel={scroll}
+      modules={[Mousewheel, Autoplay]}
+    >
+      {images.map(({ id, src, nombre, desc, url }) => (
+        <SwiperSlide className={s.hSlide} key={id}>
+          <div className={s.hCont}>
+            <div className={s.hTxt}> {nombre}</div>
+            <div className={s.hsTxt}> {desc}</div>
+            <div className={s.hgrad} />
+            <img className={s.hImg} src={src} />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
+
+export { HorizontalSlider };

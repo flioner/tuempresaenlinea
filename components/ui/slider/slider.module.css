@@ -125,13 +125,6 @@
   cursor: pointer;
   transition: 0.3s;
 }
-/* Vertical Slider */
-
-.verticalCont {
-  width: 100%;
-  max-height: max(min(40vw, 650px), 200px);
-  background-color: var(--white);
-}
 
 @media (min-width: 500px) {
   .imageCrop {
@@ -212,7 +205,7 @@
 
 .verticalCont {
   width: 100%;
-  max-height: max(min(40vw, 650px), 200px);
+  max-height: max(min(28vw, 650px), 230px);
   background-color: var(--white);
 }
 
@@ -338,10 +331,10 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .verticalCont {
     width: 100%;
-    max-height: max(min(28vw, 650px), 200px);
+    max-height: max(min(28vw, 650px), 370px);
     background-color: var(--white);
   }
 }
@@ -366,3 +359,94 @@
     font-strerch: normal;
   }
 }
+
+/* Horizontal */
+
+.hSlide {
+  max-width: 90%;
+  width: fit-content;
+  margin: 10px 5px;
+}
+.hCont {
+  border-radius: 10px !important;
+}
+.hImg {
+  border-radius: 10px !important;
+  width: auto;
+  height: 100%;
+  max-height: 500px;
+}
+
+.hTxt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @media (min-width: 0px) {
+    top: calc(100% - 60px);
+    font-size: var(--LG);
+  }
+  @media (min-width: 800px) {
+    top: calc(97% - 95px);
+    font-size: var(--XL);
+  }
+  left: 3%;
+  font-weight: bold;
+  color: var(--white);
+  z-index: 1;
+  filter: drop-shadow(0px 0px 4px #555);
+}
+
+.hsTxt {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @media (min-width: 0px) {
+    top: calc(100% - 35px);
+    font-size: var(--XS);
+  }
+  @media (min-width: 800px) {
+    top: calc(97% - 50px);
+    font-size: var(--M);
+  }
+  left: 3%;
+  color: var(--white);
+  z-index: 1;
+  filter: drop-shadow(0px 0px 4px #555);
+}
+
+.hgrad {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  border-radius: 10px !important;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+/*
+
+.hgrad {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  border-radius: 10px !important;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+/*
+.hgrad:hover {
+  opacity: 100%;
+  transition: 0.3s;
+}
+*/

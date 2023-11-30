@@ -1,5 +1,9 @@
 import Layout from "../components/layout/layout";
-import { ProfileSlider, VerticalSlider } from "../components/ui/slider/slider";
+import {
+  ProfileSlider,
+  VerticalSlider,
+  HorizontalSlider,
+} from "../components/ui/slider/slider";
 import s from "../styles/Home.module.css";
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
@@ -13,133 +17,55 @@ import DotWave from "../components/threejs/dots/dotwave";
 import { ProductDemo } from "../components/product_demo/productDemo";
 import Categories from "../components/categories/categories";
 import { Contact } from "../components/ui/contact/contact";
+import { ProjectSlider } from "../components/ui/slider/projectSlider";
 
 export default function Home() {
   const [visibleDot, setDots] = useState(false);
+  const hideIntro = true;
 
   return (
     <Layout>
-      <div /* TYPEWRITER */ className={s.landingContainer}>
-        <div className={s.landingText}>
-          Hacemos tu &nbsp;
-          <div className={s.typewriter}>
-            <Typewriter
-              options={{
-                strings: [
-                  "Página Web.",
-                  "Tienda en línea.",
-                  "Portafolio Digital.",
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </div>
+      <div /* TYPEWRITER */ className={s.titleCont}>
+        <div className={s.mainTitle}> Fabián Lióner</div>
+
+        <div className={s.fLanding}>
+          <Typewriter
+            options={{
+              strings: ["Desarrollo Fullstack.", "Diseño Web"],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </div>
         <VantaBG />
       </div>
 
-      <div /* VERTICAL SLIDER */ className={s.verticalGlow}>
-        <VerticalSlider
+      {/* VERTICAL SLIDER*/}
+      <div className={s.defaultCont}>
+        <HorizontalSlider
           scroll={true}
           images={[
             {
-              id: 0,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322814/tuempresaenlinea/Carousel/Portfaolio_lhyjh9.jpg",
-              titulo: "Portafolio",
-              url: "https://fabianlioner.com",
-              desc: "Un portafolio digital te permite mostrar tu trabajo de manera accesible, organizada y actualizada en cualquier momento y lugar.",
+              src: "/Images/photo.jpg",
+              nombre: "Photography Portfolio",
+              desc: "Next.js, Tailwind",
+              url: "https://photo.fabianlioner.com",
             },
             {
-              id: 1,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322996/tuempresaenlinea/Carousel/Showroom_d0vmrc.jpg",
-              titulo: "E-Commerce",
-              url: "https://commerce-delta-flame-60.vercel.app/",
-              desc: "Ofrecemos una experiencia de compra fácil, segura y confiable para tus clientes así como una estrategia sólida de marketing digital.",
+              src: "/Images/BAMX.jpg",
+              nombre: "BAMX App",
+              desc: "Cross-platform, React, Lottie",
+              url: "https://bagdl16.vercel.app/",
             },
+
             {
-              id: 2,
-              src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666322804/tuempresaenlinea/Carousel/Ecommerce_vbtvxz.webp",
-              titulo: "Contacto",
-              url: "/contacto",
-              desc: "Descubre cómo podemos ayudarte a satisfacer tus necesidades y objetivos, ¡y contáctanos para obtener más información!",
+              src: "/Images/novo.png",
+              nombre: "NovoPC",
+              desc: "E-commerce, Shopify API",
+              url: "https://novopc.mx",
             },
           ]}
         />
-      </div>
-
-      <div className={s.middle} /* DEVS */>
-        <div className={s.title}> Nuestros Desarrolladores Web </div>
-      </div>
-      <div className={s.middle} /* PROFILE SLIDER */>
-        <div className={s.crop}>
-          <ProfileSlider
-            images={[
-              {
-                id: 0,
-                src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298576/tuempresaenlinea/Devs/FabianLioner_Cropped_xd3pb3.jpg",
-                nombre: "Fabián",
-                universidad:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
-                urlUniversidad:
-                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
-                social:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-                socialUrl: "https://www.linkedin.com/in/fabianlioner/",
-              },
-              {
-                id: 1,
-                src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298536/tuempresaenlinea/Devs/Gabriel_Caballero_hcxxay.jpg",
-                nombre: "Gabriel",
-                universidad:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/McGill_mdsgym.jpg",
-                urlUniversidad: "https://www.mcgill.ca/",
-                social:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-                socialUrl: "https://www.linkedin.com/in/gabbrousset/",
-              },
-              {
-                id: 2,
-                src: "https://avatars.githubusercontent.com/u/105229933?v=4",
-                nombre: "Armando",
-                universidad:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
-                urlUniversidad:
-                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
-                social:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-                socialUrl:
-                  "https://www.linkedin.com/in/armando-terrazas-gomez/",
-              },
-              {
-                id: 3,
-                src: "https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677594337/Pfps/cubo_m2qsvt.jpg",
-                nombre: "Daniel",
-                universidad:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
-                urlUniversidad:
-                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
-                social:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-                socialUrl:
-                  "https://www.linkedin.com/in/juan-daniel-mu%C3%B1oz-due%C3%B1as-892a72220/",
-              },
-              {
-                id: 4,
-                src: "https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677594030/Pfps/curi_lapvee.jpg",
-                nombre: "Diego",
-                universidad:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
-                urlUniversidad:
-                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
-                social:
-                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
-                socialUrl:
-                  "https://www.linkedin.com/in/diego-curiel-castellanos-b5b125226/",
-              },
-            ]}
-          />
-        </div>
       </div>
 
       <div className={s.imgHeroCont} /* IMAGE HERO */>
@@ -226,6 +152,7 @@ export default function Home() {
       />
       <Categories />
 
+      {/*Catalogo y Checkout con Shopify */}
       <div className={s.ecommerceBanner}>
         <div className={s.ecommerceBannerText}>
           Catalogo y checkout con Shopify
@@ -235,20 +162,156 @@ export default function Home() {
           src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666999145/tuempresaenlinea/icons/shopify_mpimiu.png"
         />
       </div>
+    </Layout>
+  );
+}
 
-      <div /* TITLE */ className={s.middle}>
+/*
+      <div className={s.middle} >
+      <div className={s.title}> Slider de perfiles </div>
+      </div>
+      <div className={s.middle}>
+        <div className={s.crop}>
+          <ProfileSlider
+            images={[
+              {
+                id: 0,
+                src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298576/tuempresaenlinea/Devs/FabianLioner_Cropped_xd3pb3.jpg",
+                nombre: "Fabián",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl: "https://www.linkedin.com/in/fabianlioner/",
+              },
+              {
+                id: 1,
+                src: "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666298536/tuempresaenlinea/Devs/Gabriel_Caballero_hcxxay.jpg",
+                nombre: "Gabriel",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/McGill_mdsgym.jpg",
+                urlUniversidad: "https://www.mcgill.ca/",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl: "https://www.linkedin.com/in/gabbrousset/",
+              },
+              {
+                id: 2,
+                src: "https://avatars.githubusercontent.com/u/105229933?v=4",
+                nombre: "Armando",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl:
+                  "https://www.linkedin.com/in/armando-terrazas-gomez/",
+              },
+              {
+                id: 3,
+                src: "https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677594337/Pfps/cubo_m2qsvt.jpg",
+                nombre: "Daniel",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl:
+                  "https://www.linkedin.com/in/juan-daniel-mu%C3%B1oz-due%C3%B1as-892a72220/",
+              },
+              {
+                id: 4,
+                src: "https://res.cloudinary.com/dgb1oqgt3/image/upload/v1677594030/Pfps/curi_lapvee.jpg",
+                nombre: "Diego",
+                universidad:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/ITESM_tzfcun.png",
+                urlUniversidad:
+                  "https://tec.mx/es/computacion-y-tecnologias-de-informacion/ingeniero-en-tecnologias-computacionales",
+                social:
+                  "https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666309641/tuempresaenlinea/Devs/icons/LinkedIn_jjkifc.png",
+                socialUrl:
+                  "https://www.linkedin.com/in/diego-curiel-castellanos-b5b125226/",
+              },
+            ]}
+          />
+        </div>
+      </div>
+
+*/
+
+/*       
+<div className={s.middle}>
         <div className={s.title}> Correo Personalizado </div>
       </div>
       <img
         className={s.middleImg}
         src="https://res.cloudinary.com/ds5o5hlrl/image/upload/v1666483616/tuempresaenlinea/CorreoPersonalizado_e3qcnj.png"
       />
+      
+*/
 
-      <Contact>
-        <div className={s.contactButtCont}>
-          <div className={s.contactButton}>¡Contáctanos!</div>
+/* Project slider 
+
+   <div className={s.verticalGlow}>
+        <VerticalSlider
+          scroll={true}
+          images={[
+            {
+              src: "/Images/photo.jpg",
+              titulo: "Portafolio de Fotografía",
+              url: "https://photo.fabianlioner.com",
+              desc: "Portafolio personal de fotografía, con un diseño minimalista, elegante y responsivo.",
+            },
+            {
+              src: "/Images/novo.png",
+              titulo: "NovoPC",
+              url: "https://novopc.mx",
+              desc: "Pagina de E-Commerce, vinculada a Shopify, con un diseño moderno y componentes personalizados.",
+            },
+            {
+              src: "/Images/BAMX.jpg",
+              titulo: "BAMX Dashboard",
+              url: "https://novopc.mx",
+              desc: "Aplicación para IOS, Android y Web para el Banco de Alimentos de Mexico. Frontend en Next.js, Backend en firebase",
+            },
+          ]}
+        />
         </div>
-      </Contact>
-    </Layout>
-  );
-}
+
+
+        <div className={s.defaultCont}>
+        <ProjectSlider
+          images={[
+            {
+              src: "/Images/photo.jpg",
+              nombre: "Photography Portfolio",
+              desc: "Next.js, Tailwind",
+              url: "https://photo.fabianlioner.com",
+            },
+            {
+              src: "/Images/BAMX.jpg",
+              nombre: "BAMX App",
+              desc: "Cross-platform, React, Lottie",
+              url: "https://bagdl16.vercel.app/",
+            },
+
+            {
+              src: "/Images/novo.png",
+              nombre: "NovoPC",
+              desc: "E-commerce, Shopify API",
+              url: "https://novopc.mx",
+            },
+          ]}
+        />
+      </div>
+*/
+
+/*       <Contact>
+        <div className={s.contactButtCont}>
+          <div className={s.contactButton}>¡Ponte en contacto!</div>
+        </div>
+      </Contact> */

@@ -31,7 +31,8 @@
 
 .paddingMin {
   position: relative;
-  padding: 20px 0px;
+  margin: 20px 0px;
+  padding-bottom: 15px;
   animation: fadeIn 1s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
@@ -149,6 +150,42 @@
   font-weight: 500;
   color: var(--darkergrey);
   z-index: 99;
+}
+
+/* Landing Name */
+.fLanding {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: var(--M);
+  font-weight: 500;
+  z-index: 99;
+}
+
+.titleCont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+
+  width: 100%;
+  height: max(min(40vw, 550px), 230px);
+  animation: fadeIn 1.2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.mainTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  font-size: max(min(4.5vw, 7rem), 2rem);
+  font-weight: 700;
 }
 
 /* Text */
@@ -273,6 +310,14 @@
   }
 }
 
+.defaultCont {
+  animation: fadeIn 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  margin-top: max(min(5vw, 60px), 20px);
+}
+
 /* Image Hero */
 .imgHeroCont {
   animation: fadeIn 1s;
@@ -350,7 +395,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: max(min(30vw, 550px), 100px);
+  height: max(min(30vw, 550px), 230px);
   animation: fadeIn 1.2s;
   animation-delay: 0.2s;
   animation-fill-mode: both;
@@ -370,7 +415,7 @@
   position: absolute;
   top: 0px;
   z-index: 0;
-  height: max(min(30vw, 550px), 100px);
+  height: 100%;
   width: 100%;
 }
 

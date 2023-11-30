@@ -1,5 +1,6 @@
 .navMainContainer {
   position: relative;
+  width: 100%;
   display: flex;
   height: max(min(8vw, 80px), 50px);
   background-color: #fff;
@@ -13,6 +14,7 @@
 
 .navContainer {
   display: flex;
+
   height: max(min(8vw, 80px), 50px);
   background-color: #fff;
   padding: 20px;
@@ -27,6 +29,39 @@
   align-items: center;
 }
 
+.menu {
+  @media (min-width: 0) {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+  }
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
+
+.navBody {
+  @media (min-width: 0) {
+    display: none;
+  }
+  @media (min-width: 700px) {
+    display: flex;
+    width: 100%;
+    margin-left: 10px;
+  }
+}
+
+.navTxt {
+  color: var(--grey);
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0px 10px;
+  transition: 0.3s;
+}
+.navTxt:hover {
+  color: var(--darkgrey);
+  transition: 0.3s;
+}
 .mainTitle {
   font-weight: 600;
 }
@@ -62,4 +97,54 @@
   align-items: center;
   color: var(--mediumgrey);
   font-size: var(--S);
+}
+
+/* MODAL */
+
+.modalBg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalBody {
+  background-color: var(--white);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: var(--glow);
+  z-index: 999;
+}
+
+.modalTxt {
+  color: var(--grey);
+  font-weight: 600;
+  font-size: var(--LG);
+  cursor: pointer;
+  margin: 5px 10px;
+  transition: 0.3s;
+}
+
+.modalTxt:hover {
+  color: var(--darkgrey);
+  transition: 0.3s;
+}
+
+.menuIcon {
+  height: 12px;
+  width: 15px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menuIcon:hover {
+  opacity: 1;
+  transition: 0.3s;
 }
