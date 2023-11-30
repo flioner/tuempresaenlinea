@@ -174,9 +174,38 @@ export function ScrollControls({
     const onWheel = (e) => (el.scrollLeft += e.deltaY / 2);
     if (horizontal) el.addEventListener("wheel", onWheel, { passive: true });
 
+    const onTouchMove = (e) => {
+      const touch = e.touches[0];
+      const moveX = touch.clientX;
+      const moveY = touch.clientY;
+
+      // Calculate the distance moved by touch and use it to scroll
+      const distanceX = initialTouchX - moveX;
+      const distanceY = initialTouchY - moveY;
+
+      if (horizontal) {
+        el.scrollLeft += distanceX;
+      } else {
+        el.scrollTop += distanceY;
+      }
+
+      // Update initial touch position for the next move
+      initialTouchX = moveX;
+      initialTouchY = moveY;
+    };
+
+    let initialTouchX, initialTouchY;
+    const onTouchStart = (e) => {
+      initialTouchX = e.touches[0].clientX;
+      initialTouchY = e.touches[0].clientY;
+    };
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: true });
+
     return () => {
-      el.removeEventListener("scroll", onScroll);
-      if (horizontal) el.removeEventListener("wheel", onWheel);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
     };
   }, [el, size, infinite, state, invalidate, horizontal]);
 
