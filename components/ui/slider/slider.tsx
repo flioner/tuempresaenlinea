@@ -168,7 +168,10 @@ const HorizontalSlider = ({ images, scroll }) => {
       {images.map(({ id, src, nombre, desc, url }) => (
         <SwiperSlide className={s.hSlide} key={id}>
           <div className={s.hCont}>
-            <div className={s.hTxt}> {nombre}</div>
+            <a href={url} target="_blank">
+              <div className={s.hTxt}> {nombre}</div>
+            </a>
+
             <div className={s.hsTxt}> {desc}</div>
             <div className={s.hgrad} />
             <img className={s.hImg} src={src} />

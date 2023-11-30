@@ -394,6 +394,10 @@
   color: var(--white);
   z-index: 1;
   filter: drop-shadow(0px 0px 4px #555);
+  text-decoration: none;
+}
+.hTxt:hover {
+  text-decoration: underline;
 }
 
 .hsTxt {

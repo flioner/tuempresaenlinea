@@ -31,7 +31,11 @@ export default function Home() {
         <div className={s.fLanding}>
           <Typewriter
             options={{
-              strings: ["Desarrollo Fullstack.", "Diseño Web"],
+              strings: [
+                "Desarrollo Fullstack",
+                "Diseño Web",
+                "Fotografía y Video",
+              ],
               autoStart: true,
               loop: true,
             }}
