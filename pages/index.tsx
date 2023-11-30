@@ -58,7 +58,7 @@ export default function Home() {
               src: "/Images/BAMX.jpg",
               nombre: "BAMX App",
               desc: "Cross-platform, React, Lottie",
-              url: "https://bagdl16.vercel.app/",
+              url: "https://www.youtube.com/watch?v=KDZEw_ubQG8",
             },
 
             {
@@ -66,6 +66,18 @@ export default function Home() {
               nombre: "NovoPC",
               desc: "E-commerce, Shopify API",
               url: "https://novopc.mx",
+            },
+            {
+              src: "/Images/showroom.png",
+              nombre: "Custom Showroom",
+              desc: "Muestra tu marca con componentes personalizados",
+              url: "portafolio",
+            },
+            {
+              src: "/Images/ecommerce.webp",
+              nombre: "Ecommerce",
+              desc: "Custom components, Shopify API & Checkout",
+              url: "ecommerce",
             },
           ]}
         />

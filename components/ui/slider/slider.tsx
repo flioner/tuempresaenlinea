@@ -5,6 +5,7 @@ import "swiper/css";
 import s from "./slider.module.css";
 import { Modal } from "../modal/modal";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const ProfileSlider = ({ images }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -152,6 +153,16 @@ const VerticalSlider = ({ images, scroll }) => {
 export { VerticalSlider };
 
 const HorizontalSlider = ({ images, scroll }) => {
+  const { pathname } = useRouter();
+  const currPath = useRouter();
+
+  const routeTo = (url) => {
+    if (url.includes("http")) {
+      window.open(url, "_blank");
+    } else {
+      currPath.push(url);
+    }
+  };
   return (
     <Swiper
       direction={"horizontal"}
@@ -168,9 +179,10 @@ const HorizontalSlider = ({ images, scroll }) => {
       {images.map(({ id, src, nombre, desc, url }) => (
         <SwiperSlide className={s.hSlide} key={id}>
           <div className={s.hCont}>
-            <a href={url} target="_blank" rel="noreferrer">
-              <div className={s.hTxt}> {nombre}</div>
-            </a>
+            <div className={s.hTxt} onClick={() => routeTo(url)}>
+              {" "}
+              {nombre}
+            </div>
 
             <div className={s.hsTxt}> {desc}</div>
             <div className={s.hgrad} />
