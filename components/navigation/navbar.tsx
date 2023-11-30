@@ -39,19 +39,19 @@ const NavBar = ({}) => {
   const navOptions = [
     {
       txt: "Proyectos",
-      url: "/",
+      url: "/proyectos",
     },
     {
       txt: "Experiencia",
-      url: "/",
+      url: "/experiencia",
     },
     {
       txt: "Acerca de",
-      url: "/",
+      url: "/acerca-de",
     },
     {
       txt: "Github",
-      url: "/",
+      url: "https://github.com/flioner",
     },
     {
       txt: "LinkedIn",
