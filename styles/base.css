@@ -38,8 +38,10 @@
   --MG: max(min(1.9vw, 1.7rem), 0.85rem);
   --M: max(min(1.9vw, 1.5rem), 0.85rem);
   --S: max(min(1.7vw, 1.2rem), 0.8rem);
+  --XMS: max(min(1.3vw, 1.1rem), 0.75rem);
   --XS: max(min(1vw, 1rem), 0.75rem);
-  --XXS: max(min(1vw, 1rem), 0.7rem);
+  --XXS: max(min(1vw, 0.95rem), 0.675rem);
+  --XXXS: max(min(1vw, 0.9rem), 0.65rem);
 
   /* Extra font sizes */
   @media (max-width: 400px) {

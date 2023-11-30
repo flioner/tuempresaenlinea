@@ -72,9 +72,9 @@ const NavBar = ({}) => {
 
         <div className={s.navBody}>
           {navOptions.map(({ txt, url }, index) => (
-            <div onClick={() => routeTo(url)} className={s.navTxt} key={index}>
+            <a href={url} className={s.navTxt} key={index}>
               {txt}
-            </div>
+            </a>
           ))}
         </div>
 
@@ -87,13 +87,9 @@ const NavBar = ({}) => {
           <div className={s.modalBg} onClick={closeModal} />
           <div className={s.modalBody}>
             {navOptions.map(({ txt, url }, index) => (
-              <div
-                onClick={() => routeTo(url)}
-                className={s.modalTxt}
-                key={index}
-              >
+              <a href={url} className={s.modalTxt} key={index}>
                 {txt}
-              </div>
+              </a>
             ))}
           </div>
         </>
