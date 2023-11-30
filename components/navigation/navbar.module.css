@@ -64,6 +64,7 @@
 }
 .mainTitle {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .contacto {
@@ -97,6 +98,10 @@
   align-items: center;
   color: var(--mediumgrey);
   font-size: var(--S);
+}
+
+.footerTxt {
+  cursor: pointer;
 }
 
 /* MODAL */

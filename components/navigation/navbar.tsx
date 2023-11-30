@@ -125,7 +125,7 @@ const Footer = ({}) => {
     <div>
       <div className={s.footerSpacer}></div>
       <div className={s.footer} onClick={() => routeTo("/")}>
-        Fabian Lioner © 2023
+        <div className={s.footerTxt}> Fabian Lioner © 2023</div>
       </div>
     </div>
   );
