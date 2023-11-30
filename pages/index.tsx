@@ -21,7 +21,6 @@ import { ProjectSlider } from "../components/ui/slider/projectSlider";
 
 export default function Home() {
   const [visibleDot, setDots] = useState(false);
-  const hideIntro = true;
 
   return (
     <Layout>

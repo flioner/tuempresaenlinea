@@ -3,7 +3,7 @@ import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import { NavBar, Footer } from "../navigation/navbar";
 
-export const siteTitle = "Tu Empresa En Linea";
+export const siteTitle = "Fabian Lioner";
 
 export default function Layout({ children }) {
   return (
