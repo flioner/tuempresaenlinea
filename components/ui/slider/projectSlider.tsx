@@ -77,7 +77,7 @@ const ProjectSlider = ({ images }) => {
                 <div className={s.title}>{nombre}</div>
                 <div className={s.desc}>{desc}</div>
                 <div className={url == "" ? s.hidden : s.visit}>
-                  <a href={url} target="_blank">
+                  <a href={url} target="_blank" rel="noreferrer">
                     Visit
                   </a>
                 </div>
