@@ -44,7 +44,7 @@ export default function Home() {
         <VantaBG />
       </div>
 
-      {/* VERTICAL SLIDER*/}
+      {/* SLIDER*/}
       <div className={s.defaultCont}>
         <HorizontalSlider
           scroll={true}
